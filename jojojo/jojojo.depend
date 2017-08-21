@@ -394,3 +394,19 @@
 	<SFML/Graphics.hpp>
 	<iostream>
 
+1502331794 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\test.cpp
+	<SFML/Graphics.hpp>
+
+1502855082 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
+	<SFML/Graphics.hpp>
+	"Game.h"
+	<memory>
+	<iostream>
+
+1503280952 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+	"Game.h"
+	<iostream>
+
+1503281303 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
+	<SFML/Graphics.hpp>
+
