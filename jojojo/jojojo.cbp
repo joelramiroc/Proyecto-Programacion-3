@@ -13,6 +13,7 @@
 				<Option compiler="ming64_whit_g" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="C:/SFML-2.4.2/lib/libsfml-graphics-d.a" />
@@ -27,6 +28,7 @@
 				<Option compiler="ming64_whit_g" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -45,7 +47,11 @@
 		</Linker>
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
+		<Unit filename="include/HerenciaPadre.h" />
+		<Unit filename="include/WithTime.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/HerenciaPadre.cpp" />
+		<Unit filename="src/WithTime.cpp" />
 		<Unit filename="test.cpp" />
 		<Extensions>
 			<code_completion />

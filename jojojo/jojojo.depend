@@ -403,10 +403,29 @@
 	<memory>
 	<iostream>
 
-1503327517 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1503344052 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
 1503327033 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
 	<SFML/Graphics.hpp>
+
+1503349116 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
+	"HerenciaPadre.h"
+
+1503354536 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
+	<iostream>
+
+1503355019 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
+	"WithTime.h"
+
+1503355839 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtime.h
+	"HerenciaPadre.h"
+	<fstream>
+
+1503355473 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtimeeasy.cpp
+	"WithTimeEasy.h"
+
+1503355354 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimeeasy.h
+	"WithTime.h"
 
