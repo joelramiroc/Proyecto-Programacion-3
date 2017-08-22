@@ -397,35 +397,77 @@
 1502331794 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\test.cpp
 	<SFML/Graphics.hpp>
 
-1502855082 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
+1503407399 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
 	<SFML/Graphics.hpp>
 	"Game.h"
 	<memory>
 	<iostream>
 
-1503344052 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1503408634 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
-1503327033 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
+1503407269 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
 	<SFML/Graphics.hpp>
 
 1503349116 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
-1503354536 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
+1503363046 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
 	<iostream>
-
-1503355019 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
-	"WithTime.h"
-
-1503355839 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtime.h
-	"HerenciaPadre.h"
 	<fstream>
 
-1503355473 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtimeeasy.cpp
+1503363131 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
+	"WithTime.h"
+
+1503363048 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtime.h
+	"HerenciaPadre.h"
+
+1503356043 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtimeeasy.cpp
 	"WithTimeEasy.h"
 
-1503355354 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimeeasy.h
+1503363691 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimeeasy.h
 	"WithTime.h"
+
+1503362600 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtimehard.cpp
+	"WithTimeHard.h"
+
+1503362568 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimehard.h
+	"WithTime.h"
+
+1503362418 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtimenormal.cpp
+	"WithTimeNormal.h"
+
+1503362599 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimenormal.h
+	"WithTime.h"
+
+1503363845 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmoviments.cpp
+	"WithMoviments.h"
+
+1503362887 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmoviments.h
+	"HerenciaPadre.h"
+
+1503363904 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmovimentseasy.cpp
+	"WithMovimentsEasy.h"
+
+1503363984 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmovimentseasy.h
+	"WithMoviments.h"
+
+1503364273 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmovimentshard.cpp
+	"WithMovimentsHard.h"
+
+1503364222 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmovimentshard.h
+	"WithMoviments.h"
+
+1503364272 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmovimentsnormal.cpp
+	"WithMovimentsNormal.h"
+
+1503364097 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmovimentsnormal.h
+	"WithMoviments.h"
+
+1503365600 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+	"Libre.h"
+
+1503365354 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
+	"HerenciaPadre.h"
 

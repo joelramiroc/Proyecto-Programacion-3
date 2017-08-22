@@ -48,10 +48,26 @@
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
 		<Unit filename="include/HerenciaPadre.h" />
+		<Unit filename="include/Libre.h" />
+		<Unit filename="include/WithMoviments.h" />
+		<Unit filename="include/WithMovimentsEasy.h" />
+		<Unit filename="include/WithMovimentsHard.h" />
+		<Unit filename="include/WithMovimentsNormal.h" />
 		<Unit filename="include/WithTime.h" />
+		<Unit filename="include/WithTimeEasy.h" />
+		<Unit filename="include/WithTimeHard.h" />
+		<Unit filename="include/WithTimeNormal.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/HerenciaPadre.cpp" />
+		<Unit filename="src/Libre.cpp" />
+		<Unit filename="src/WithMoviments.cpp" />
+		<Unit filename="src/WithMovimentsEasy.cpp" />
+		<Unit filename="src/WithMovimentsHard.cpp" />
+		<Unit filename="src/WithMovimentsNormal.cpp" />
 		<Unit filename="src/WithTime.cpp" />
+		<Unit filename="src/WithTimeEasy.cpp" />
+		<Unit filename="src/WithTimeHard.cpp" />
+		<Unit filename="src/WithTimeNormal.cpp" />
 		<Unit filename="test.cpp" />
 		<Extensions>
 			<code_completion />
