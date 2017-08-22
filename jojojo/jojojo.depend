@@ -397,18 +397,21 @@
 1502331794 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\test.cpp
 	<SFML/Graphics.hpp>
 
-1503407399 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
+1503422293 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
 	<SFML/Graphics.hpp>
 	"Game.h"
+	"Window.h"
 	<memory>
 	<iostream>
 
-1503408634 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1503436699 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
-1503407269 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
+1503435839 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
 	<SFML/Graphics.hpp>
+	"Window.h"
+	<vector>
 
 1503349116 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
@@ -470,4 +473,11 @@
 
 1503365354 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
 	"HerenciaPadre.h"
+
+1503432263 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\window.h
+	<SFML/Graphics.hpp>
+	<vector>
+
+1503432523 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
+	"Window.h"
 

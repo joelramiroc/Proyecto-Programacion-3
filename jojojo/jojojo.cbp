@@ -49,6 +49,7 @@
 		<Unit filename="Game.h" />
 		<Unit filename="include/HerenciaPadre.h" />
 		<Unit filename="include/Libre.h" />
+		<Unit filename="include/Window.h" />
 		<Unit filename="include/WithMoviments.h" />
 		<Unit filename="include/WithMovimentsEasy.h" />
 		<Unit filename="include/WithMovimentsHard.h" />
@@ -60,6 +61,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/HerenciaPadre.cpp" />
 		<Unit filename="src/Libre.cpp" />
+		<Unit filename="src/Window.cpp" />
 		<Unit filename="src/WithMoviments.cpp" />
 		<Unit filename="src/WithMovimentsEasy.cpp" />
 		<Unit filename="src/WithMovimentsHard.cpp" />
