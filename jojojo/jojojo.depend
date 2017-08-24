@@ -404,11 +404,11 @@
 	<memory>
 	<iostream>
 
-1503492977 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1503553090 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
-1503455397 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
+1503552800 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
 	<SFML/Graphics.hpp>
 	"Window.h"
 	<vector>
@@ -423,11 +423,13 @@
 	"WithTimeEasy.h"
 	"WithTimeNormal.h"
 	"WithTimeHard.h"
+	"SpriteObjet.h"
+	"Cube.h"
 
-1503460605 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
+1503542384 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
-1503492998 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
+1503539107 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
 	<iostream>
 	<fstream>
 	<SFML/Graphics.hpp>
@@ -482,7 +484,7 @@
 1503457368 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmovimentsnormal.h
 	"WithMoviments.h"
 
-1503461122 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+1503497329 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
 	"Libre.h"
 
 1503492977 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
@@ -498,4 +500,52 @@
 
 1503452890 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
 	"Window.h"
+
+1503520521 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\spriteobjet.h
+	<SFML/Graphics.hpp>
+
+1503551920 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\cube.cpp
+	"Cube.h"
+
+1503542536 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\cube.h
+	"Piece.h"
+	"Arista.h"
+	"Centro.h"
+	"Vertice.h"
+	<SFML/Graphics.hpp>
+
+1503550782 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\piece.h
+	<iostream>
+	"SpriteObjet.h"
+	<SFML/Graphics.hpp>
+	<iostream>
+	<vector>
+	"PieceFaces.h"
+
+1503542384 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\piece.cpp
+	"Piece.h"
+
+1503536080 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\piecefaces.h
+	<SFML/Graphics.hpp>
+
+1503541795 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\arista.cpp
+	"Arista.h"
+
+1503538943 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\arista.h
+	"Piece.h"
+
+1503541752 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\centro.cpp
+	"Centro.h"
+
+1503538901 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\centro.h
+	"Piece.h"
+
+1503538968 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\vertice.h
+	"Piece.h"
+
+1503543215 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\piecefaces.cpp
+	"PieceFaces.h"
+
+1503541903 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\vertice.cpp
+	"Vertice.h"
 

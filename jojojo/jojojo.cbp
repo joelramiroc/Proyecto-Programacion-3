@@ -47,8 +47,14 @@
 		</Linker>
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
+		<Unit filename="include/Arista.h" />
+		<Unit filename="include/Centro.h" />
+		<Unit filename="include/Cube.h" />
 		<Unit filename="include/HerenciaPadre.h" />
 		<Unit filename="include/Libre.h" />
+		<Unit filename="include/Piece.h" />
+		<Unit filename="include/PieceFaces.h" />
+		<Unit filename="include/Vertice.h" />
 		<Unit filename="include/Window.h" />
 		<Unit filename="include/WithMoviments.h" />
 		<Unit filename="include/WithMovimentsEasy.h" />
@@ -59,8 +65,14 @@
 		<Unit filename="include/WithTimeHard.h" />
 		<Unit filename="include/WithTimeNormal.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Arista.cpp" />
+		<Unit filename="src/Centro.cpp" />
+		<Unit filename="src/Cube.cpp" />
 		<Unit filename="src/HerenciaPadre.cpp" />
 		<Unit filename="src/Libre.cpp" />
+		<Unit filename="src/Piece.cpp" />
+		<Unit filename="src/PieceFaces.cpp" />
+		<Unit filename="src/Vertice.cpp" />
 		<Unit filename="src/Window.cpp" />
 		<Unit filename="src/WithMoviments.cpp" />
 		<Unit filename="src/WithMovimentsEasy.cpp" />
