@@ -5,7 +5,8 @@
 class WithMovimentsEasy:WithMoviments
 {
     public:
-        WithMovimentsEasy(vector<sf::Drawable*>& drawables);
+        WithMovimentsEasy(map<string,sf::Drawable*>& drawables);
+
         void comparations();
         void guardar();
         void info();

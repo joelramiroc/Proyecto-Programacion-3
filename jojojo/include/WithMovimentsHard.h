@@ -5,7 +5,7 @@
 class WithMovimentsHard:WithMoviments
 {
     public:
-        WithMovimentsHard(vector<sf::Drawable*>& drawables);
+        WithMovimentsHard(map<string,sf::Drawable*>& drawables);
         void comparations();
         void guardar();
         void info();

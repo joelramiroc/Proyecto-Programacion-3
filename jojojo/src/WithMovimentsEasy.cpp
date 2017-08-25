@@ -1,6 +1,6 @@
 #include "WithMovimentsEasy.h"
 
-WithMovimentsEasy::WithMovimentsEasy(vector<sf::Drawable*>& drawables)
+WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables)
 {
     this->nivelDificultad="Easy";
 }

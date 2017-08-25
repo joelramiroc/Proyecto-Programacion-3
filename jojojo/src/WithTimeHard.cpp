@@ -1,6 +1,6 @@
 #include "WithTimeHard.h"
 
-WithTimeHard::WithTimeHard(vector<sf::Drawable*>& drawables)
+WithTimeHard::WithTimeHard(map<string,sf::Drawable*>& drawables)
 {
 
     this->nivelDificultad="Hard";

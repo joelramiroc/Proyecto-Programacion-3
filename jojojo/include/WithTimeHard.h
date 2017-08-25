@@ -5,7 +5,7 @@
 class WithTimeHard:public WithTime
 {
     public:
-    WithTimeHard(vector<sf::Drawable*>& drawables);
+    WithTimeHard(map<string,sf::Drawable*>& drawables);
     void comparations();
     void guardar();
     void info();

@@ -8,12 +8,15 @@ Window::Window(sf::RenderWindow &window)
     window_.setKeyRepeatEnabled(false);
 }
 
-void Window::draw(vector<sf::Drawable*>& sprites)
+void Window::draw(map<string,sf::Drawable*>&drawables)
 {
 
-        for(int i=0;i<sprites.size();i++){
-            window_.draw(*sprites[i]);
-        }
+  map<string, sf::Drawable*>::iterator i = (drawables).begin();
+  while(i!=drawables.end())
+  {
+     window_.draw(*(*i).second);
+     i++;
+  }
 
 
 }

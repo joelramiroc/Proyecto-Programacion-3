@@ -8,7 +8,7 @@ class Arista:public Piece
         void MovementAbajo();
         void MovementIzquierda();
         void MovementDerecha();
-        Arista(sf::Color arriba,sf::Color abajo,sf::Color atras,sf::Color frente,sf::Color derecha,sf::Color izquierda);
+        Arista(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &frente,sf::Color &derecha,sf::Color &izquierda);
 
 };
 

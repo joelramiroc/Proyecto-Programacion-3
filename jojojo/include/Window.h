@@ -20,7 +20,7 @@ public:
 
     void draw1(sf::Text draw);
 
-    void draw(vector<sf::Drawable*>& sprites);
+    void draw(map<string,sf::Drawable*>& drawables);
 
     bool pollEvent(sf::Event &event);
 

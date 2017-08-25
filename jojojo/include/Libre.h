@@ -9,7 +9,7 @@ using namespace std;
 class Libre:public HerenciaPadre
 {
     public:
-        Libre(vector<sf::Drawable*>* drawables);
+        Libre(map<string,sf::Drawable*>& drawables);
         void comparations();
         void guardar();
         void info();

@@ -1,6 +1,6 @@
 #include "WithTimeNormal.h"
 
-WithTimeNormal::WithTimeNormal(vector<sf::Drawable*>& drawables)
+WithTimeNormal::WithTimeNormal(map<string,sf::Drawable*>& drawables)
 {
 
     this->nivelDificultad="Normal";

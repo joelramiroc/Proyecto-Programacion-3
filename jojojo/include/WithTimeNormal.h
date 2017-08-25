@@ -6,7 +6,7 @@
 class WithTimeNormal: public WithTime
 {
  public:
-    WithTimeNormal(vector<sf::Drawable*>& drawables);
+    WithTimeNormal(map<string,sf::Drawable*>& drawables);
      void comparations();
      void guardar();
      void info();

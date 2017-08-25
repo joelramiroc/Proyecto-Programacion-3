@@ -1,6 +1,6 @@
 #include "WithMovimentsHard.h"
 
-WithMovimentsHard::WithMovimentsHard(vector<sf::Drawable*>& drawables)
+WithMovimentsHard::WithMovimentsHard(map<string,sf::Drawable*>& drawables)
 {
     this->nivelDificultad="Hard";
 }

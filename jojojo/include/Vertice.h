@@ -10,7 +10,7 @@ class Vertice:public Piece
         void MovementAbajo();
         void MovementIzquierda();
         void MovementDerecha();
-        Vertice(sf::Color arriba,sf::Color abajo,sf::Color atras,sf::Color frente,sf::Color derecha,sf::Color izquierda);
+        Vertice(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &frente,sf::Color &derecha,sf::Color &izquierda);
 
 };
 

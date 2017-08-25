@@ -1,6 +1,6 @@
 #include "WithTimeEasy.h"
 
-WithTimeEasy::WithTimeEasy(vector<sf::Drawable*>& drawables)
+WithTimeEasy::WithTimeEasy(map<string,sf::Drawable*>& drawables)
 {
 
     this->nivelDificultad="Easy";

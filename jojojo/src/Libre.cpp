@@ -1,8 +1,8 @@
 #include "Libre.h"
 
-Libre::Libre(vector<sf::Drawable*>* drawables)
+Libre::Libre(map<string,sf::Drawable*>& drawables)
 {
- this->drawables=drawables;
+// this->drawables=drawables;
 // ((sf::Sprite*)(*drawables)[4])->setColor(sf::Color::Blue);
 //this->spriteCara[][]=;
 

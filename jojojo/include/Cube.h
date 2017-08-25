@@ -9,6 +9,7 @@
 class Cube
 {
     public:
+
         Cube();
         sf::Color verde;
         sf::Color amarillo;
@@ -17,7 +18,6 @@ class Cube
         sf::Color naranja;
         sf::Color blanco;
         sf::Color negro;
-
         Piece* p1;
         Piece* p2;
         Piece* p3;

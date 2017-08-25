@@ -6,13 +6,14 @@
 #include <iostream>
 #include <vector>
 #include"PieceFaces.h"
+#include<map>
 using namespace std;
 
 class Piece
 {
     public:
-        vector<sf::Color> horizontalRotacion;
-        vector<sf::Color> verticalRotacion;
+        map<string, sf::Color*> temporal;
+        map<string,sf::Color*> positions;
         Piece();
         Piece* arriba;
         Piece* abajo;

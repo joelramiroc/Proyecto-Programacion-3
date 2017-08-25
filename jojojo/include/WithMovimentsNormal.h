@@ -5,7 +5,7 @@
 class WithMovimentsNormal:WithMoviments
 {
     public:
-        WithMovimentsNormal(vector<sf::Drawable*>& drawables);
+        WithMovimentsNormal(map<string,sf::Drawable*>& drawables);
         void comparations();
         void guardar();
         void info();

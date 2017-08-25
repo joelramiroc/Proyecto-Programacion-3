@@ -16,6 +16,8 @@
 #include "WithTimeHard.h"
 #include "SpriteObjet.h"
 #include "Cube.h"
+#include<map>
+
 class Game
 {
 private:
@@ -32,7 +34,7 @@ private:
     sf::Font letra;
     sf::Text miTexto;
     bool UP{false}, DOWN{false}, LEFT{false}, RIGHT{false} ;
-    vector<sf::Drawable*> drawables;
+    map<string,sf::Drawable*> drawables;
     vector<sf::Sprite*> sprites;
 
     sf::Texture f1_p1_textA,f1_p2_textA,f1_p3_textA,f1_p4_textA,f1_p5_textA,f1_p6_textA,f1_p7_textA,f1_p8_textA,f1_p9_textA,

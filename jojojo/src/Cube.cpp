@@ -5,10 +5,11 @@ Cube::Cube()
     verde= sf::Color::Green;
         negro= sf::Color::Black;
         azul= sf::Color::Blue;
-        naranja= sf::Color(180,189,134);
+        naranja= sf::Color::Magenta;
         rojo= sf::Color::Red;
         blanco= sf::Color::White;
         amarillo =sf::Color::Yellow;
+
 
         p1=new Vertice(blanco,negro,negro,verde,negro,naranja);
         p3=new Vertice(blanco,negro,negro,verde,rojo,negro);

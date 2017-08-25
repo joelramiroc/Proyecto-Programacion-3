@@ -1,6 +1,6 @@
 #include "WithMovimentsNormal.h"
 
-WithMovimentsNormal::WithMovimentsNormal(vector<sf::Drawable*>& drawables)
+WithMovimentsNormal::WithMovimentsNormal(map<string,sf::Drawable*>& drawables)
 {
     this->nivelDificultad="Normal";
 }
