@@ -16,9 +16,9 @@ public:
 
     void close();
 
-    void display();
+    void cleared();
 
-    void draw1(sf::Text draw);
+    void display();
 
     void draw(map<string,sf::Drawable*>& drawables);
 

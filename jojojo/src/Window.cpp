@@ -21,9 +21,9 @@ void Window::draw(map<string,sf::Drawable*>&drawables)
 
 }
 
- void Window::draw1(sf::Text draw)
+ void Window::cleared()
  {
-    window_.draw(draw);
+    window_.clear(sf::Color::Black);
  }
 
 bool Window::isOpen() {

@@ -21,7 +21,7 @@ public:
     virtual void loop()=0;
     virtual void events()=0;
     virtual void update()=0;
-    vector<sf::Drawable*>* drawables;
+    //vector<sf::Drawable*>* drawables;
     vector<sf::Sprite*> sprites;
     HerenciaPadre();
 };

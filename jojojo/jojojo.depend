@@ -397,14 +397,14 @@
 1502331794 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\test.cpp
 	<SFML/Graphics.hpp>
 
-1503422293 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
+1503927102 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
 	<SFML/Graphics.hpp>
 	"Game.h"
 	"Window.h"
 	<memory>
 	<iostream>
 
-1503683724 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1503889113 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
@@ -430,7 +430,7 @@
 1503542384 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
-1503539107 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
+1503925624 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
 	<iostream>
 	<fstream>
 	<SFML/Graphics.hpp>
@@ -485,27 +485,28 @@
 1503595463 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmovimentsnormal.h
 	"WithMoviments.h"
 
-1503597637 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+1503926798 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
 	"Libre.h"
 
-1503595481 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
+1503889832 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
 	"HerenciaPadre.h"
 	<vector>
 	<SFML/Graphics.hpp>
 	<iostream>
 	"Window.h"
+	"Cube.h"
 
-1503597603 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\window.h
+1503879606 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\window.h
 	<SFML/Graphics.hpp>
 	<vector>
 
-1503602823 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
+1503879571 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
 	"Window.h"
 
 1503520521 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\spriteobjet.h
 	<SFML/Graphics.hpp>
 
-1503679906 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\cube.cpp
+1503783750 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\cube.cpp
 	"Cube.h"
 
 1503615576 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\cube.h
@@ -548,6 +549,6 @@
 1503543215 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\piecefaces.cpp
 	"PieceFaces.h"
 
-1503615508 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\vertice.cpp
+1503889333 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\vertice.cpp
 	"Vertice.h"
 

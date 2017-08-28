@@ -26,7 +26,6 @@ int Game::inicializar()
         return 1;
     };
     f1_p1_sprtC.setTexture(f1_p1_textC);
-    f1_p1_sprtC.setColor(sf::Color(246,140,3));
     f1_p1_sprtC.setColor(*(cube->p18->positions["frente"]));
     f1_p1_sprtC.setPosition(sf::Vector2f(170.f,570.f));
     if(!f1_p2_textC.loadFromFile("img/blanco/BLANCO2C.png")){
@@ -456,9 +455,6 @@ int Game::inicializar()
     drawables["sprite_frontal7"] = &sprite_frontal7;
     drawables["sprite_frontal8"] = &sprite_frontal8;
     drawables["sprite_frontal9"] = &sprite_frontal9;
-
-
-
     drawables["miTexto"]=&miTexto;
 
     return 0;
@@ -481,7 +477,7 @@ void Game::update()
     string tipo= "libre";
     if(tipo=="libre")
     {
-        playing = new Libre(drawables);
+        playing = new Libre(drawables,cube,window_);
     }else if(tipo=="WithTimeEasy")
     {
         playing= new WithTimeEasy(drawables);

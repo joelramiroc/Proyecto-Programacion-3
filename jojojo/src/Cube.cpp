@@ -5,7 +5,7 @@ Cube::Cube()
     verde= sf::Color::Green;
         negro= sf::Color::Black;
         azul= sf::Color::Blue;
-        naranja= sf::Color::Magenta;
+        naranja= sf::Color(207,118,6);
         rojo= sf::Color::Red;
         blanco= sf::Color::White;
         amarillo =sf::Color::Yellow;
@@ -146,15 +146,17 @@ Cube::Cube()
 
 void Cube::movementArriba(Piece& piece)
 {
-    /*Piece* temporal;
-    temporal= piece.arriba;
-    piece=piece->arriba;
-    temporal= piece->arriba;
-    piece=piece->arriba;
-    temporal= piece->arriba;
-    piece=piece->arriba;
-    temporal=& piece->arriba;
-    piece=piece->arriba;*/
+    Piece* origin;
+    Piece* actual;
+    Piece* atras;
+    Piece* atrasAbajo;
+    Piece* frenteAbajo;
+    actual=&piece;
+    origin=&piece;
+    atras=actual->arriba;
+    atrasAbajo=atras->arriba;
+    frenteAbajo=atrasAbajo->arriba;
+    actual=origin->abajo;
 }
 
 void Cube::movementAbajo(Piece& piece)
