@@ -10,7 +10,22 @@ Centro::Centro(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &fr
     positions["abajo"]=&abajo;
 }
 
-        void Centro:: MovementArriba(){};
-        void Centro:: MovementAbajo(){};
-        void Centro:: MovementIzquierda(){};
-        void Centro:: MovementDerecha(){};
+void Centro:: MovementArriba()
+{
+    /*temporal["arriba"]=positions["arriba"];
+    temporal["atras"]=positions["atras"];
+    temporal["abajo"]=positions["abajo"];
+    temporal["frente"]=positions["frente"];
+
+    positions["arriba"]=temporal["frente"];
+    positions["atras"]=temporal["arriba"];
+    positions["abajo"]=temporal["atras"];
+    positions["frente"]=temporal["abajo"];*/
+};
+
+
+void Centro:: MovementAbajo(){};
+
+void Centro:: MovementIzquierda(){};
+
+void Centro:: MovementDerecha(){};

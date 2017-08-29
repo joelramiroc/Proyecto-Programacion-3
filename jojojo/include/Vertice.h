@@ -5,7 +5,6 @@
 class Vertice:public Piece
 {
     public:
-        public:
         void MovementArriba();
         void MovementAbajo();
         void MovementIzquierda();

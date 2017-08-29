@@ -21,7 +21,6 @@ Vertice::Vertice(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &
     positions["atras"]=temporal["arriba"];
     positions["abajo"]=temporal["atras"];
     positions["frente"]=temporal["abajo"];
-
     };
 
     void Vertice:: MovementAbajo()

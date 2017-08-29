@@ -13,6 +13,114 @@ Libre::Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_):
 void Libre::comparations()
 {
 
+    sf::Color sp1Frontal=(*(sf::Sprite*)((*temp)["f1_p1_sprtC"])).getColor();
+    sf::Color sp2Frontal=(*(sf::Sprite*)((*temp)["f1_p2_sprtC"])).getColor();
+    sf::Color sp3Frontal=(*(sf::Sprite*)((*temp)["f1_p3_sprtC"])).getColor();
+    sf::Color sp4Frontal=(*(sf::Sprite*)((*temp)["f1_p4_sprtC"])).getColor();
+    sf::Color sp5Frontal=(*(sf::Sprite*)((*temp)["f1_p5_sprtC"])).getColor();
+    sf::Color sp6Frontal=(*(sf::Sprite*)((*temp)["f1_p6_sprtC"])).getColor();
+    sf::Color sp7Frontal=(*(sf::Sprite*)((*temp)["f1_p7_sprtC"])).getColor();
+    sf::Color sp8Frontal=(*(sf::Sprite*)((*temp)["f1_p8_sprtC"])).getColor();
+    sf::Color sp9Frontal=(*(sf::Sprite*)((*temp)["f1_p9_sprtC"])).getColor();
+
+    sf::Color sp1Arriba=(*(sf::Sprite*)((*temp)["f1_p1_sprtA"])).getColor();
+    sf::Color sp2Arriba=(*(sf::Sprite*)((*temp)["f1_p2_sprtA"])).getColor();
+    sf::Color sp3Arriba=(*(sf::Sprite*)((*temp)["f1_p3_sprtA"])).getColor();
+    sf::Color sp4Arriba=(*(sf::Sprite*)((*temp)["f1_p4_sprtA"])).getColor();
+    sf::Color sp5Arriba=(*(sf::Sprite*)((*temp)["f1_p5_sprtA"])).getColor();
+    sf::Color sp6Arriba=(*(sf::Sprite*)((*temp)["f1_p6_sprtA"])).getColor();
+    sf::Color sp7Arriba=(*(sf::Sprite*)((*temp)["f1_p7_sprtA"])).getColor();
+    sf::Color sp8Arriba=(*(sf::Sprite*)((*temp)["f1_p8_sprtA"])).getColor();
+    sf::Color sp9Arriba=(*(sf::Sprite*)((*temp)["f1_p9_sprtA"])).getColor();
+
+    sf::Color sp1Atras=(*(sf::Sprite*)((*temp)["f1_p1_sprtB"])).getColor();
+    sf::Color sp2Atras=(*(sf::Sprite*)((*temp)["f1_p2_sprtB"])).getColor();
+    sf::Color sp3Atras=(*(sf::Sprite*)((*temp)["f1_p3_sprtB"])).getColor();
+    sf::Color sp4Atras=(*(sf::Sprite*)((*temp)["f1_p4_sprtB"])).getColor();
+    sf::Color sp5Atras=(*(sf::Sprite*)((*temp)["f1_p5_sprtB"])).getColor();
+    sf::Color sp6Atras=(*(sf::Sprite*)((*temp)["f1_p6_sprtB"])).getColor();
+    sf::Color sp7Atras=(*(sf::Sprite*)((*temp)["f1_p7_sprtB"])).getColor();
+    sf::Color sp8Atras=(*(sf::Sprite*)((*temp)["f1_p8_sprtB"])).getColor();
+    sf::Color sp9Atras=(*(sf::Sprite*)((*temp)["f1_p9_sprtB"])).getColor();
+
+    sf::Color sp1Abajo=(*(sf::Sprite*)((*temp)["f1_p1_sprtC2"])).getColor();
+    sf::Color sp2Abajo=(*(sf::Sprite*)((*temp)["f1_p2_sprtC2"])).getColor();
+    sf::Color sp3Abajo=(*(sf::Sprite*)((*temp)["f1_p3_sprtC2"])).getColor();
+    sf::Color sp4Abajo=(*(sf::Sprite*)((*temp)["f1_p4_sprtC2"])).getColor();
+    sf::Color sp5Abajo=(*(sf::Sprite*)((*temp)["f1_p5_sprtC2"])).getColor();
+    sf::Color sp6Abajo=(*(sf::Sprite*)((*temp)["f1_p6_sprtC2"])).getColor();
+    sf::Color sp7Abajo=(*(sf::Sprite*)((*temp)["f1_p7_sprtC2"])).getColor();
+    sf::Color sp8Abajo=(*(sf::Sprite*)((*temp)["f1_p8_sprtC2"])).getColor();
+    sf::Color sp9Abajo=(*(sf::Sprite*)((*temp)["f1_p9_sprtC2"])).getColor();
+
+    sf::Color sp1Izquierda=(*(sf::Sprite*)((*temp)["f1_p1_sprtA2"])).getColor();
+    sf::Color sp2Izquierda=(*(sf::Sprite*)((*temp)["f1_p2_sprtA2"])).getColor();
+    sf::Color sp3Izquierda=(*(sf::Sprite*)((*temp)["f1_p3_sprtA2"])).getColor();
+    sf::Color sp4Izquierda=(*(sf::Sprite*)((*temp)["f1_p4_sprtA2"])).getColor();
+    sf::Color sp5Izquierda=(*(sf::Sprite*)((*temp)["f1_p5_sprtA2"])).getColor();
+    sf::Color sp6Izquierda=(*(sf::Sprite*)((*temp)["f1_p6_sprtA2"])).getColor();
+    sf::Color sp7Izquierda=(*(sf::Sprite*)((*temp)["f1_p7_sprtA2"])).getColor();
+    sf::Color sp8Izquierda=(*(sf::Sprite*)((*temp)["f1_p8_sprtA2"])).getColor();
+    sf::Color sp9Izquierda=(*(sf::Sprite*)((*temp)["f1_p9_sprtA2"])).getColor();
+
+    sf::Color sp1Derecha=(*(sf::Sprite*)((*temp)["f1_p1_sprtB2"])).getColor();
+    sf::Color sp2Derecha=(*(sf::Sprite*)((*temp)["f1_p2_sprtB2"])).getColor();
+    sf::Color sp3Derecha=(*(sf::Sprite*)((*temp)["f1_p3_sprtB2"])).getColor();
+    sf::Color sp4Derecha=(*(sf::Sprite*)((*temp)["f1_p4_sprtB2"])).getColor();
+    sf::Color sp5Derecha=(*(sf::Sprite*)((*temp)["f1_p5_sprtB2"])).getColor();
+    sf::Color sp6Derecha=(*(sf::Sprite*)((*temp)["f1_p6_sprtB2"])).getColor();
+    sf::Color sp7Derecha=(*(sf::Sprite*)((*temp)["f1_p7_sprtB2"])).getColor();
+    sf::Color sp8Derecha=(*(sf::Sprite*)((*temp)["f1_p8_sprtB2"])).getColor();
+    sf::Color sp9Derecha=(*(sf::Sprite*)((*temp)["f1_p9_sprtB2"])).getColor();
+
+    if(sp1Arriba==sp2Arriba && sp2Arriba==sp3Arriba && sp3Arriba==sp4Arriba && sp4Arriba==sp5Arriba
+       && sp5Arriba==sp6Arriba && sp6Arriba==sp7Arriba && sp7Arriba==sp8Arriba && sp8Arriba==sp9Arriba
+       )
+    {
+
+        if(sp1Abajo==sp2Abajo && sp2Abajo==sp3Abajo && sp3Abajo==sp4Abajo && sp4Abajo==sp5Abajo
+           && sp5Abajo==sp6Abajo && sp6Abajo==sp7Abajo && sp7Abajo==sp8Abajo && sp8Abajo==sp9Abajo
+           )
+        {
+
+
+             if(sp1Frontal==sp2Frontal && sp2Frontal==sp3Frontal && sp3Frontal==sp4Frontal && sp4Frontal==sp5Frontal
+               && sp5Frontal==sp6Frontal && sp6Frontal==sp7Frontal && sp7Frontal==sp8Frontal && sp8Frontal==sp9Frontal
+               )
+            {
+
+                     if(sp1Atras==sp2Atras && sp2Atras==sp3Atras && sp3Atras==sp4Atras && sp4Atras==sp5Atras
+                       && sp5Atras==sp6Atras && sp6Atras==sp7Atras && sp7Atras==sp8Atras && sp8Atras==sp9Atras
+                       )
+                    {
+
+                         if(sp1Izquierda==sp2Izquierda && sp2Izquierda==sp3Izquierda && sp3Izquierda==sp4Izquierda && sp4Izquierda==sp5Izquierda
+                           && sp5Izquierda==sp6Izquierda && sp6Izquierda==sp7Izquierda && sp7Izquierda==sp8Izquierda && sp8Izquierda==sp9Izquierda
+                           )
+                        {
+
+                             if(sp1Derecha==sp2Derecha && sp2Derecha==sp3Derecha && sp3Derecha==sp4Derecha && sp4Derecha==sp5Derecha
+                               && sp5Derecha==sp6Derecha && sp6Derecha==sp7Derecha && sp7Derecha==sp8Derecha && sp8Derecha==sp9Derecha
+                               )
+                             {
+                                 cout<<"Reto completado. "<<endl;
+                             }
+
+
+                        }
+
+
+                    }
+
+
+                }
+
+            }
+
+
+        }
+
+
 };
 
 void Libre::guardar()
@@ -37,20 +145,164 @@ void Libre::events()
 
 void Libre::act()
 {
-    map<string,sf::Drawable*> map_temp = *temp;
-    sf::Drawable* drawable_temp = map_temp["f1_p1_sprtC"];
-    sf::Sprite* sprite_temp = (sf::Sprite*)drawable_temp;
-    (*sprite_temp).setColor(*(cube->p15->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p1_sprtC"])).setColor(*(cube->p18->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p2_sprtC"])).setColor(*(cube->p19->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p3_sprtC"])).setColor(*(cube->p20->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p4_sprtC"])).setColor(*(cube->p10->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p5_sprtC"])).setColor(*(cube->p11->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p6_sprtC"])).setColor(*(cube->p12->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p7_sprtC"])).setColor(*(cube->p1->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p8_sprtC"])).setColor(*(cube->p2->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p9_sprtC"])).setColor(*(cube->p3->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["f1_p1_sprtA"])).setColor(*(cube->p1->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p2_sprtA"])).setColor(*(cube->p2->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p3_sprtA"])).setColor(*(cube->p3->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p4_sprtA"])).setColor(*(cube->p4->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p5_sprtA"])).setColor(*(cube->p5->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p6_sprtA"])).setColor(*(cube->p6->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p7_sprtA"])).setColor(*(cube->p7->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p8_sprtA"])).setColor(*(cube->p8->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p9_sprtA"])).setColor(*(cube->p9->positions["arriba"]));
+    (*(sf::Sprite*)((*temp)["f1_p1_sprtB"])).setColor(*(cube->p3->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p2_sprtB"])).setColor(*(cube->p12->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p3_sprtB"])).setColor(*(cube->p20->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p4_sprtB"])).setColor(*(cube->p6->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p5_sprtB"])).setColor(*(cube->p13->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p6_sprtB"])).setColor(*(cube->p14->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p7_sprtB"])).setColor(*(cube->p9->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p8_sprtB"])).setColor(*(cube->p14->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p9_sprtB"])).setColor(*(cube->p26->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p1_sprtC2"])).setColor(*(cube->p1->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p2_sprtC2"])).setColor(*(cube->p4->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p3_sprtC2"])).setColor(*(cube->p7->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p4_sprtC2"])).setColor(*(cube->p10->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p5_sprtC2"])).setColor(*(cube->p17->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p6_sprtC2"])).setColor(*(cube->p16->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p7_sprtC2"])).setColor(*(cube->p18->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p8_sprtC2"])).setColor(*(cube->p21->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p9_sprtC2"])).setColor(*(cube->p24->positions["izquierda"]));
+    (*(sf::Sprite*)((*temp)["f1_p1_sprtA2"])).setColor(*(cube->p18->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p2_sprtA2"])).setColor(*(cube->p21->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p3_sprtA2"])).setColor(*(cube->p24->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p4_sprtA2"])).setColor(*(cube->p19->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p5_sprtA2"])).setColor(*(cube->p22->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p6_sprtA2"])).setColor(*(cube->p25->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p7_sprtA2"])).setColor(*(cube->p20->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p8_sprtA2"])).setColor(*(cube->p23->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p9_sprtA2"])).setColor(*(cube->p26->positions["abajo"]));
+    (*(sf::Sprite*)((*temp)["f1_p1_sprtB2"])).setColor(*(cube->p24->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p2_sprtB2"])).setColor(*(cube->p16->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p3_sprtB2"])).setColor(*(cube->p7->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p4_sprtB2"])).setColor(*(cube->p25->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p5_sprtB2"])).setColor(*(cube->p15->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p6_sprtB2"])).setColor(*(cube->p8->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p7_sprtB2"])).setColor(*(cube->p26->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p8_sprtB2"])).setColor(*(cube->p14->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["f1_p9_sprtB2"])).setColor(*(cube->p9->positions["atras"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal1"])).setColor(*(cube->p1->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal2"])).setColor(*(cube->p2->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal3"])).setColor(*(cube->p3->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal4"])).setColor(*(cube->p10->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal5"])).setColor(*(cube->p11->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal6"])).setColor(*(cube->p12->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal7"])).setColor(*(cube->p18->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal8"])).setColor(*(cube->p19->positions["frente"]));
+    (*(sf::Sprite*)((*temp)["sprite_frontal9"])).setColor(*(cube->p20->positions["frente"]));
+
+
+
+
+
 }
 
 void Libre::update()
 {
+    if(u)
+    {
+        cube->movementIzquiera(&(cube->p1));
+
+        cout<<"funciono?"<<endl;
+        act();
+        u=false;
+    }
+
+    if(d)
+    {
+        cube->movementDerecha(&(cube->p18));
+
+        cout<<"funciono?"<<endl;
+        act();
+        d=false;
+    }
+
+    if(s)
+    {
+        cube->movementDerecha(&(cube->p10));
+
+        cout<<"funciono?"<<endl;
+        act();
+
+        s=false;
+    }
+
+    if(t)
+    {
+        cube->movementDerecha(&(cube->p5));
+        cout<<"funciono?"<<endl;
+        act();
+
+        t=false;
+    }
+
+    if(m)
+    {
+        cube->movementArriba(&(cube->p5));
+        cout<<"funciono?"<<endl;
+        act();
+        m=false;
+    }
+
+    if(f)
+    {
+        cube->movementDerecha(&(cube->p1));
+        cout<<"funciono?"<<endl;
+        act();
+
+        f=false;
+    }
+
+    if(b)
+    {
+        cube->movementIzquiera(&(cube->p7));
+
+        cout<<"funciono?"<<endl;
+        act();
+
+        b=false;
+    }
+
+    if(r)
+    {
+       cube->movementArriba(&(cube->p13));
+       cout<<"funciono?"<<endl;
+        act();
+
+        r=false;
+    }
+
+
     if(l)
     {
-        Piece* p;
-        p=cube->p1;
-        cube->movementArriba(*p);
-        p->MovementArriba();
+        cube->movementArriba(&(cube->p1));
+        cube->p1->MovementArriba();
+        cube->p4->MovementArriba();
+        cube->p7->MovementArriba();
+        cube->p10->MovementArriba();
+        cube->p17->MovementArriba();
+        cube->p16->MovementArriba();
+        cube->p18->MovementArriba();
+        cube->p21->MovementArriba();
+        cube->p24->MovementArriba();
         cout<<"funciono?"<<endl;
         l=false;
         act();
@@ -72,6 +324,7 @@ void Libre::loop()
     {
         events();
         update();
+        comparations();
     }
         cleared();
 };

@@ -485,7 +485,7 @@
 1503595463 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmovimentsnormal.h
 	"WithMoviments.h"
 
-1503926798 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+1503984967 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
 	"Libre.h"
 
 1503889832 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
@@ -506,17 +506,17 @@
 1503520521 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\spriteobjet.h
 	<SFML/Graphics.hpp>
 
-1503783750 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\cube.cpp
+1504015435 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\cube.cpp
 	"Cube.h"
 
-1503615576 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\cube.h
+1503983641 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\cube.h
 	"Piece.h"
 	"Arista.h"
 	"Centro.h"
 	"Vertice.h"
 	<SFML/Graphics.hpp>
 
-1503615575 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\piece.h
+1503975799 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\piece.h
 	<iostream>
 	"SpriteObjet.h"
 	<SFML/Graphics.hpp>
@@ -531,24 +531,24 @@
 1503536080 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\piecefaces.h
 	<SFML/Graphics.hpp>
 
-1503614713 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\arista.cpp
+1503970163 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\arista.cpp
 	"Arista.h"
 
 1503612230 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\arista.h
 	"Piece.h"
 
-1503612513 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\centro.cpp
+1503971474 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\centro.cpp
 	"Centro.h"
 
 1503612159 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\centro.h
 	"Piece.h"
 
-1503612159 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\vertice.h
+1503971478 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\vertice.h
 	"Piece.h"
 
 1503543215 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\piecefaces.cpp
 	"PieceFaces.h"
 
-1503889333 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\vertice.cpp
+1504014688 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\vertice.cpp
 	"Vertice.h"
 

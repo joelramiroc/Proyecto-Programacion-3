@@ -15,10 +15,10 @@ class Piece
         map<string, sf::Color*> temporal;
         map<string,sf::Color*> positions;
         Piece();
-        Piece* arriba;
-        Piece* abajo;
-        Piece* izquierda;
-        Piece* derecha;
+        Piece** arriba;
+        Piece** abajo;
+        Piece** izquierda;
+        Piece** derecha;
         virtual void MovementArriba()=0;
         virtual void MovementAbajo()=0;
         virtual void MovementIzquierda()=0;
