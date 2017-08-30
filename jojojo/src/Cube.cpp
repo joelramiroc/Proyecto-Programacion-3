@@ -144,42 +144,15 @@ Cube::Cube()
 }
 
 
-void Cube::movementArriba(Piece** piece)
+void Cube::movements(Piece** piece1,Piece** piece2,Piece** piece3,Piece** piece4)
 {
-    Piece* pos1;
-    Piece* pos2;
-    Piece* pos3;
-    Piece* pos4;
-
-    pos1=(*piece);
-    pos2=(*pos1->arriba);
-    pos3=(*pos2->arriba);
-    pos4=(*pos3->arriba);
+    Piece* temporal;
+    temporal=(*piece1);
+    (*piece1)=(*piece4);
+    (*piece4)=(*piece3);
+    (*piece3)=(*piece2);
+    (*piece2)=temporal;
 
 
-    Piece* temp=pos4;
-
-    (*(*(*(*piece)->arriba)->arriba)->arriba)=pos3;
-    (*(*(*piece)->arriba)->arriba)=pos2;
-    (*(*piece)->arriba)=pos1;
-
-
-    //(*(*piece)->abajo)=pos3;
-    (*piece)=temp;
-
-}
-
-void Cube::movementAbajo(Piece** piece)
-{
-
-}
-
-void Cube::movementDerecha(Piece** piece)
-{
-
-}
-
-void Cube::movementIzquiera(Piece** piece)
-{
 
 }

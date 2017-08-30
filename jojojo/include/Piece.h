@@ -23,5 +23,8 @@ class Piece
         virtual void MovementAbajo()=0;
         virtual void MovementIzquierda()=0;
         virtual void MovementDerecha()=0;
+  //      virtual void MovementBack()=0;
+//        virtual void MovementBack()=0;
+
 };
 #endif // PIECE_H

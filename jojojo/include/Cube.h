@@ -45,10 +45,8 @@ class Cube
         Piece* p25;
         Piece* p26;
 
-        void movementArriba(Piece** piece);
-        void movementAbajo(Piece** piece);
-        void movementDerecha(Piece** piece);
-        void movementIzquiera(Piece** piece);
+        void movements(Piece** piece1,Piece** piece2,Piece** piece3,Piece** piece4);
+
 };
 
 #endif // CUBE_H

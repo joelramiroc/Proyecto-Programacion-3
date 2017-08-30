@@ -137,8 +137,26 @@ void Libre::events()
 {
     while(window_.pollEvent(miEvento))
     {
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::R)
+            r=true;
         if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::L)
             l=true;
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::F)
+            f=true;
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::B)
+            b=true;
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::U)
+            u=true;
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::D)
+            d=true;
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::S)
+            s=true;
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::T)
+            t=true;
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::M)
+            m=true;
+
+
     }
 };
 
@@ -219,94 +237,131 @@ void Libre::update()
 {
     if(u)
     {
-        cube->movementIzquiera(&(cube->p1));
 
-        cout<<"funciono?"<<endl;
         act();
         u=false;
     }
 
+
     if(d)
     {
-        cube->movementDerecha(&(cube->p18));
 
-        cout<<"funciono?"<<endl;
         act();
         d=false;
     }
 
+
     if(s)
     {
-        cube->movementDerecha(&(cube->p10));
 
-        cout<<"funciono?"<<endl;
         act();
-
         s=false;
     }
 
+
     if(t)
     {
-        cube->movementDerecha(&(cube->p5));
-        cout<<"funciono?"<<endl;
-        act();
 
+        act();
         t=false;
     }
 
+
     if(m)
     {
-        cube->movementArriba(&(cube->p5));
-        cout<<"funciono?"<<endl;
+        cube->movements(&(cube->p2),&(cube->p8),&(cube->p25),&(cube->p19));
+        cube->p2->MovementArriba();
+        cube->p8->MovementArriba();
+        cube->p25->MovementArriba();
+        cube->p19->MovementArriba();
+
+        cube->movements(&(cube->p5),&(cube->p15),&(cube->p22),&(cube->p11));
+        cube->p5->MovementArriba();
+        cube->p15->MovementArriba();
+        cube->p22->MovementArriba();
+        cube->p11->MovementArriba();
+
         act();
         m=false;
     }
 
-    if(f)
-    {
-        cube->movementDerecha(&(cube->p1));
-        cout<<"funciono?"<<endl;
-        act();
 
+    if(f)////////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+        cube->movements(&(cube->p2),&(cube->p8),&(cube->p25),&(cube->p19));
+        cube->p2->MovementArriba();
+        cube->p8->MovementArriba();
+        cube->p25->MovementArriba();
+        cube->p19->MovementArriba();
+
+        cube->movements(&(cube->p5),&(cube->p15),&(cube->p22),&(cube->p11));
+        cube->p5->MovementArriba();
+        cube->p15->MovementArriba();
+        cube->p22->MovementArriba();
+        cube->p11->MovementArriba();
+
+        act();
         f=false;
     }
 
-    if(b)
+
+    if(b)///////////////////////////////////////////////////////////////////
     {
-        cube->movementIzquiera(&(cube->p7));
+        cube->movements(&(cube->p7),&(cube->p9),&(cube->p26),&(cube->p24));
+        cube->p7->MovementArriba();
+        cube->p9->MovementArriba();
+        cube->p26->MovementArriba();
+        cube->p24->MovementArriba();
 
-        cout<<"funciono?"<<endl;
+        cube->movements(&(cube->p8),&(cube->p14),&(cube->p25),&(cube->p16));
+        cube->p8->MovementArriba();
+        cube->p14->MovementArriba();
+        cube->p25->MovementArriba();
+        cube->p16->MovementArriba();
+
         act();
-
         b=false;
     }
 
+
     if(r)
     {
-       cube->movementArriba(&(cube->p13));
-       cout<<"funciono?"<<endl;
-        act();
+        cube->movements(&(cube->p3),&(cube->p9),&(cube->p26),&(cube->p20));
+        cube->p3->MovementArriba();
+        cube->p9->MovementArriba();
+        cube->p26->MovementArriba();
+        cube->p20->MovementArriba();
 
+        cube->movements(&(cube->p6),&(cube->p14),&(cube->p23),&(cube->p12));
+        cube->p6->MovementArriba();
+        cube->p14->MovementArriba();
+        cube->p12->MovementArriba();
+        cube->p23->MovementArriba();
+        act();
         r=false;
     }
 
 
     if(l)
     {
-        cube->movementArriba(&(cube->p1));
+        cube->movements(&(cube->p1),&(cube->p7),&(cube->p24),&(cube->p18));
         cube->p1->MovementArriba();
-        cube->p4->MovementArriba();
         cube->p7->MovementArriba();
-        cube->p10->MovementArriba();
-        cube->p17->MovementArriba();
-        cube->p16->MovementArriba();
         cube->p18->MovementArriba();
-        cube->p21->MovementArriba();
         cube->p24->MovementArriba();
-        cout<<"funciono?"<<endl;
-        l=false;
+
+        cube->movements(&(cube->p4),&(cube->p16),&(cube->p21),&(cube->p10));
+        cube->p4->MovementArriba();
+        cube->p16->MovementArriba();
+        cube->p21->MovementArriba();
+        cube->p10->MovementArriba();
+
         act();
+        l=false;
     }
+
+
+
     window_.cleared();
     window_.draw(*temp);
     window_.display();

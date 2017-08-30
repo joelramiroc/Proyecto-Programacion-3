@@ -10,8 +10,9 @@ Vertice::Vertice(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &
     positions["abajo"]=&abajo;
 }
 
-    void Vertice:: MovementArriba()
-    {
+
+void Vertice:: MovementArriba()
+{
     temporal["arriba"]=positions["arriba"];
     temporal["atras"]=positions["atras"];
     temporal["abajo"]=positions["abajo"];
@@ -21,45 +22,47 @@ Vertice::Vertice(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &
     positions["atras"]=temporal["arriba"];
     positions["abajo"]=temporal["atras"];
     positions["frente"]=temporal["abajo"];
-    };
+};
 
-    void Vertice:: MovementAbajo()
-    {
-
+void Vertice:: MovementAbajo()
+{
     temporal["arriba"]=positions["arriba"];
     temporal["atras"]=positions["atras"];
     temporal["abajo"]=positions["abajo"];
     temporal["frente"]=positions["frente"];
 
     positions["arriba"]=temporal["atras"];
-    positions["frente"]=temporal["arriba"];
-    positions["abajo"]=temporal["frente"];
     positions["atras"]=temporal["abajo"];
-    };
-    void Vertice:: MovementIzquierda()
-    {
+    positions["abajo"]=temporal["frente"];
+    positions["frente"]=temporal["arriba"];
 
-    temporal["derecha"]=positions["derecha"];
-    temporal["atras"]=positions["atras"];
+};
+
+void Vertice:: MovementIzquierda()
+{
     temporal["izquierda"]=positions["izquierda"];
+    temporal["atras"]=positions["atras"];
+    temporal["derecha"]=positions["derecha"];
     temporal["frente"]=positions["frente"];
 
-    positions["derecha"]=temporal["atras"];
-    positions["atras"]=temporal["izquierda"];
-    positions["izquierda"]=temporal["frente"];
-    positions["frente"]=temporal["derecha"];
-    };
-
-    void Vertice:: MovementDerecha()
-    {
-    temporal["derecha"]=positions["derecha"];
-    temporal["atras"]=positions["atras"];
-    temporal["izquierda"]=positions["izquierda"];
-    temporal["frente"]=positions["frente"];
-
-    positions["derecha"]=temporal["frente"];
-    positions["frente"]=temporal["izquierda"];
     positions["izquierda"]=temporal["atras"];
     positions["atras"]=temporal["derecha"];
-    };
+    positions["derecha"]=temporal["frente"];
+    positions["frente"]=temporal["izquierda"];
+
+};
+
+void Vertice:: MovementDerecha()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["atras"]=positions["atras"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["frente"]=positions["frente"];
+
+    positions["izquierda"]=temporal["frente"];
+    positions["atras"]=temporal["izquierda"];
+    positions["derecha"]=temporal["atras"];
+    positions["frente"]=temporal["derecha"];
+};
+
 

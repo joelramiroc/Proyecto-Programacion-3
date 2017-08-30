@@ -24,8 +24,43 @@ void Arista:: MovementArriba()
     positions["frente"]=temporal["abajo"];
 };
 
-void Arista:: MovementAbajo(){};
+void Arista:: MovementAbajo()
+{
+    temporal["arriba"]=positions["arriba"];
+    temporal["atras"]=positions["atras"];
+    temporal["abajo"]=positions["abajo"];
+    temporal["frente"]=positions["frente"];
 
-void Arista:: MovementIzquierda(){};
+    positions["arriba"]=temporal["atras"];
+    positions["atras"]=temporal["abajo"];
+    positions["abajo"]=temporal["frente"];
+    positions["frente"]=temporal["arriba"];
 
-void Arista:: MovementDerecha(){};
+};
+
+void Arista:: MovementIzquierda()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["atras"]=positions["atras"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["frente"]=positions["frente"];
+
+    positions["izquierda"]=temporal["atras"];
+    positions["atras"]=temporal["derecha"];
+    positions["derecha"]=temporal["frente"];
+    positions["frente"]=temporal["izquierda"];
+
+};
+
+void Arista:: MovementDerecha()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["atras"]=positions["atras"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["frente"]=positions["frente"];
+
+    positions["izquierda"]=temporal["frente"];
+    positions["atras"]=temporal["izquierda"];
+    positions["derecha"]=temporal["atras"];
+    positions["frente"]=temporal["derecha"];
+};

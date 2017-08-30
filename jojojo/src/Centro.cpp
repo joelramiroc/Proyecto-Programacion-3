@@ -12,7 +12,7 @@ Centro::Centro(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &fr
 
 void Centro:: MovementArriba()
 {
-    /*temporal["arriba"]=positions["arriba"];
+    temporal["arriba"]=positions["arriba"];
     temporal["atras"]=positions["atras"];
     temporal["abajo"]=positions["abajo"];
     temporal["frente"]=positions["frente"];
@@ -20,12 +20,46 @@ void Centro:: MovementArriba()
     positions["arriba"]=temporal["frente"];
     positions["atras"]=temporal["arriba"];
     positions["abajo"]=temporal["atras"];
-    positions["frente"]=temporal["abajo"];*/
+    positions["frente"]=temporal["abajo"];
 };
 
+void Centro:: MovementAbajo()
+{
+    temporal["arriba"]=positions["arriba"];
+    temporal["atras"]=positions["atras"];
+    temporal["abajo"]=positions["abajo"];
+    temporal["frente"]=positions["frente"];
 
-void Centro:: MovementAbajo(){};
+    positions["arriba"]=temporal["atras"];
+    positions["atras"]=temporal["abajo"];
+    positions["abajo"]=temporal["frente"];
+    positions["frente"]=temporal["arriba"];
 
-void Centro:: MovementIzquierda(){};
+};
 
-void Centro:: MovementDerecha(){};
+void Centro:: MovementIzquierda()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["atras"]=positions["atras"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["frente"]=positions["frente"];
+
+    positions["izquierda"]=temporal["atras"];
+    positions["atras"]=temporal["derecha"];
+    positions["derecha"]=temporal["frente"];
+    positions["frente"]=temporal["izquierda"];
+
+};
+
+void Centro:: MovementDerecha()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["atras"]=positions["atras"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["frente"]=positions["frente"];
+
+    positions["izquierda"]=temporal["frente"];
+    positions["atras"]=temporal["izquierda"];
+    positions["derecha"]=temporal["atras"];
+    positions["frente"]=temporal["derecha"];
+};
