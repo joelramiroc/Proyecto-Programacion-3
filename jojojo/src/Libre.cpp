@@ -186,7 +186,7 @@ void Libre::act()
     (*(sf::Sprite*)((*temp)["f1_p3_sprtB"])).setColor(*(cube->p20->positions["derecha"]));
     (*(sf::Sprite*)((*temp)["f1_p4_sprtB"])).setColor(*(cube->p6->positions["derecha"]));
     (*(sf::Sprite*)((*temp)["f1_p5_sprtB"])).setColor(*(cube->p13->positions["derecha"]));
-    (*(sf::Sprite*)((*temp)["f1_p6_sprtB"])).setColor(*(cube->p14->positions["derecha"]));
+    (*(sf::Sprite*)((*temp)["f1_p6_sprtB"])).setColor(*(cube->p23->positions["derecha"]));
     (*(sf::Sprite*)((*temp)["f1_p7_sprtB"])).setColor(*(cube->p9->positions["derecha"]));
     (*(sf::Sprite*)((*temp)["f1_p8_sprtB"])).setColor(*(cube->p14->positions["derecha"]));
     (*(sf::Sprite*)((*temp)["f1_p9_sprtB"])).setColor(*(cube->p26->positions["derecha"]));
@@ -288,17 +288,17 @@ void Libre::update()
 
     if(f)////////////////////////////////////////////////////////////////////////////////////////////////////
     {
-        cube->movements(&(cube->p2),&(cube->p8),&(cube->p25),&(cube->p19));
-        cube->p2->MovementArriba();
-        cube->p8->MovementArriba();
-        cube->p25->MovementArriba();
-        cube->p19->MovementArriba();
+        cube->movements(&(cube->p1),&(cube->p3),&(cube->p20),&(cube->p18));
+        cube->p1->MovementGiroDerecha();
+        cube->p3->MovementGiroDerecha();
+        cube->p20->MovementGiroDerecha();
+        cube->p19->MovementGiroDerecha();
 
-        cube->movements(&(cube->p5),&(cube->p15),&(cube->p22),&(cube->p11));
-        cube->p5->MovementArriba();
-        cube->p15->MovementArriba();
-        cube->p22->MovementArriba();
-        cube->p11->MovementArriba();
+        cube->movements(&(cube->p2),&(cube->p12),&(cube->p19),&(cube->p10));
+        cube->p2->MovementGiroDerecha();
+        cube->p12->MovementGiroDerecha();
+        cube->p19->MovementGiroDerecha();
+        cube->p10->MovementGiroDerecha();
 
         act();
         f=false;
@@ -308,16 +308,16 @@ void Libre::update()
     if(b)///////////////////////////////////////////////////////////////////
     {
         cube->movements(&(cube->p7),&(cube->p9),&(cube->p26),&(cube->p24));
-        cube->p7->MovementArriba();
-        cube->p9->MovementArriba();
-        cube->p26->MovementArriba();
-        cube->p24->MovementArriba();
+        cube->p7->MovementGiroDerecha();
+        cube->p9->MovementGiroDerecha();
+        cube->p26->MovementGiroDerecha();
+        cube->p24->MovementGiroDerecha();
 
         cube->movements(&(cube->p8),&(cube->p14),&(cube->p25),&(cube->p16));
-        cube->p8->MovementArriba();
-        cube->p14->MovementArriba();
-        cube->p25->MovementArriba();
-        cube->p16->MovementArriba();
+        cube->p8->MovementGiroDerecha();
+        cube->p14->MovementGiroDerecha();
+        cube->p25->MovementGiroDerecha();
+        cube->p16->MovementGiroDerecha();
 
         act();
         b=false;

@@ -63,3 +63,30 @@ void Centro:: MovementDerecha()
     positions["derecha"]=temporal["atras"];
     positions["frente"]=temporal["derecha"];
 };
+
+void Centro::MovementGiroDerecha()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["arriba"]=positions["arriba"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["abajo"]=positions["abajo"];
+
+    positions["izquierda"]=temporal["abajo"];
+    positions["arriba"]=temporal["izquierda"];
+    positions["derecha"]=temporal["arriba"];
+    positions["abajo"]=temporal["derecha"];
+}
+
+
+void Centro::MovementGiroIzquierda()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["arriba"]=positions["arriba"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["abajo"]=positions["abajo"];
+
+    positions["izquierda"]=temporal["arriba"];
+    positions["arriba"]=temporal["derecha"];
+    positions["derecha"]=temporal["abajo"];
+    positions["abajo"]=temporal["izquierda"];
+}

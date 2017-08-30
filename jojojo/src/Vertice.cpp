@@ -65,4 +65,29 @@ void Vertice:: MovementDerecha()
     positions["frente"]=temporal["derecha"];
 };
 
+void Vertice::MovementGiroDerecha()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["arriba"]=positions["arriba"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["abajo"]=positions["abajo"];
 
+    positions["izquierda"]=temporal["abajo"];
+    positions["arriba"]=temporal["izquierda"];
+    positions["derecha"]=temporal["arriba"];
+    positions["abajo"]=temporal["derecha"];
+}
+
+
+void Vertice::MovementGiroIzquierda()
+{
+    temporal["izquierda"]=positions["izquierda"];
+    temporal["arriba"]=positions["arriba"];
+    temporal["derecha"]=positions["derecha"];
+    temporal["abajo"]=positions["abajo"];
+
+    positions["izquierda"]=temporal["arriba"];
+    positions["arriba"]=temporal["derecha"];
+    positions["derecha"]=temporal["abajo"];
+    positions["abajo"]=temporal["izquierda"];
+}
