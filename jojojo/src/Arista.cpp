@@ -74,9 +74,9 @@ void Arista::MovementGiroDerecha()
     temporal["abajo"]=positions["abajo"];
 
     positions["izquierda"]=temporal["abajo"];
-    positions["arriba"]=temporal["izquierda"];
-    positions["derecha"]=temporal["arriba"];
     positions["abajo"]=temporal["derecha"];
+    positions["derecha"]=temporal["arriba"];
+    positions["arriba"]=temporal["izquierda"];
 }
 
 

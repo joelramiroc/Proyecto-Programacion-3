@@ -235,8 +235,68 @@ void Libre::act()
 
 void Libre::update()
 {
+
+    if(ll)
+    {
+        act();
+        ll=false;
+    }
+    if(rr)
+    {
+        act();
+        rr=false;
+    }
+    if(uu)
+    {
+        act();
+        uu=false;
+    }
+    if(dd)
+    {
+        act();
+        dd=false;
+    }
+    if(ff)
+    {
+        act();
+        ff=false;
+    }
+    if(bb)
+    {
+        act();
+        bb=false;
+    }
+    if(mm)
+    {
+        act();
+        mm=false;
+    }
+    if(ss)
+    {
+        act();
+        ss=false;
+    }
+    if(tt)
+    {
+        act();
+        tt=false;
+    }
+
+
+
     if(u)
     {
+        cube->movements(&(cube->p1),&(cube->p7),&(cube->p9),&(cube->p3));
+        cube->p1->MovementDerecha();
+        cube->p7->MovementDerecha();
+        cube->p9->MovementDerecha();
+        cube->p3->MovementDerecha();
+
+        cube->movements(&(cube->p2),&(cube->p4),&(cube->p8),&(cube->p6));
+        cube->p2->MovementDerecha();
+        cube->p4->MovementDerecha();
+        cube->p8->MovementDerecha();
+        cube->p6->MovementDerecha();
 
         act();
         u=false;
@@ -245,7 +305,17 @@ void Libre::update()
 
     if(d)
     {
+        cube->movements(&(cube->p18),&(cube->p20),&(cube->p26),&(cube->p24));
+        cube->p18->MovementIzquierda();
+        cube->p24->MovementIzquierda();
+        cube->p26->MovementIzquierda();
+        cube->p20->MovementIzquierda();
 
+        cube->movements(&(cube->p19),&(cube->p23),&(cube->p25),&(cube->p21));
+        cube->p19->MovementIzquierda();
+        cube->p21->MovementIzquierda();
+        cube->p25->MovementIzquierda();
+        cube->p23->MovementIzquierda();
         act();
         d=false;
     }
@@ -253,6 +323,17 @@ void Libre::update()
 
     if(s)
     {
+        cube->movements(&(cube->p10),&(cube->p16),&(cube->p14),&(cube->p12));
+        cube->p10->MovementDerecha();
+        cube->p16->MovementDerecha();
+        cube->p14->MovementDerecha();
+        cube->p12->MovementDerecha();
+
+        cube->movements(&(cube->p17),&(cube->p15),&(cube->p13),&(cube->p11));
+        cube->p17->MovementDerecha();
+        cube->p15->MovementDerecha();
+        cube->p13->MovementDerecha();
+        cube->p11->MovementDerecha();
 
         act();
         s=false;
@@ -261,6 +342,17 @@ void Libre::update()
 
     if(t)
     {
+        cube->movements(&(cube->p4),&(cube->p6),&(cube->p23),&(cube->p21));
+        cube->p4->MovementGiroDerecha();
+        cube->p6->MovementGiroDerecha();
+        cube->p23->MovementGiroDerecha();
+        cube->p21->MovementGiroDerecha();
+
+        cube->movements(&(cube->p5),&(cube->p13),&(cube->p22),&(cube->p17));
+        cube->p5->MovementGiroDerecha();
+        cube->p13->MovementGiroDerecha();
+        cube->p22->MovementGiroDerecha();
+        cube->p17->MovementGiroDerecha();
 
         act();
         t=false;
@@ -286,13 +378,13 @@ void Libre::update()
     }
 
 
-    if(f)////////////////////////////////////////////////////////////////////////////////////////////////////
+    if(f)
     {
         cube->movements(&(cube->p1),&(cube->p3),&(cube->p20),&(cube->p18));
         cube->p1->MovementGiroDerecha();
         cube->p3->MovementGiroDerecha();
         cube->p20->MovementGiroDerecha();
-        cube->p19->MovementGiroDerecha();
+        cube->p18->MovementGiroDerecha();
 
         cube->movements(&(cube->p2),&(cube->p12),&(cube->p19),&(cube->p10));
         cube->p2->MovementGiroDerecha();
@@ -305,7 +397,7 @@ void Libre::update()
     }
 
 
-    if(b)///////////////////////////////////////////////////////////////////
+    if(b)
     {
         cube->movements(&(cube->p7),&(cube->p9),&(cube->p26),&(cube->p24));
         cube->p7->MovementGiroDerecha();
