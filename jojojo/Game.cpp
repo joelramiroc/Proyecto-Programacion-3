@@ -4,24 +4,23 @@ using namespace std;
 
 Game::Game(Window& window) : window_(window)
 {
+    string nombreArchivo;
+    nombreArchivo="Estadisticas_Del_Juego";
+    ofstream archivo(nombreArchivo);
 }
 
 int Game::inicializar()
 {
-
-////////////////////////////////////////TEXTOS///////////////////////////////////////////////
-    if(!letra.loadFromFile("28DaysLater.ttf")){
+    if(!letra.loadFromFile("fonts/Wedgie Regular.ttf")){
     return 1;
     }
     miTexto.setFont(letra);
-    miTexto.setCharacterSize(100);
+    miTexto.setCharacterSize(70);
     miTexto.setString("Rubik Cube");
-    miTexto.setColor(sf::Color(180,189,134));
-    miTexto.setPosition(sf::Vector2f(400.f,20.f));
+    miTexto.setColor(sf::Color::Blue);
+    miTexto.setPosition(sf::Vector2f(100.f,70.f));
 
-////////////////////////////////////////TEXTOS///////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     if(!f1_p1_textC.loadFromFile("img/blanco/BLANCO1C.png")){
         return 1;
     };
@@ -474,7 +473,7 @@ void Game::update()
 {
     HerenciaPadre* playing=NULL;
 
-    string tipo= "libre";
+    string tipo= "WithMovimentsEasy";
     if(tipo=="libre")
     {
         playing = new Libre(drawables,cube,window_);
@@ -492,18 +491,18 @@ void Game::update()
     }
     else if(tipo=="WithMovimentsEasy")
     {
-//        playing= new WithMovimentsEasy(drawables);
+        playing= new WithMovimentsEasy(drawables,cube,window_);
     }
     else if(tipo=="WithMovimentsNormal")
     {
-//        playing= new WithMovimentsNormal(drawables);
+        playing= new WithMovimentsNormal(drawables);
     }
     else if(tipo=="WithMovimentsHard")
     {
-//        playing= new WithMovimentsHard(drawables);
+        playing= new WithMovimentsHard(drawables);
     }else
     {
-    return;
+        return;
     }
     playing->loop();
 }

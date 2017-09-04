@@ -16,7 +16,9 @@
 #include "WithTimeHard.h"
 #include "SpriteObjet.h"
 #include "Cube.h"
+#include "InfoPlayer.h"
 #include<map>
+#include<iostream>
 
 class Game
 {
@@ -36,7 +38,7 @@ private:
     bool UP{false}, DOWN{false}, LEFT{false}, RIGHT{false} ;
     map<string,sf::Drawable*> drawables;
     vector<sf::Sprite*> sprites;
-
+    InfoPlayer* info;
     sf::Texture f1_p1_textA,f1_p2_textA,f1_p3_textA,f1_p4_textA,f1_p5_textA,f1_p6_textA,f1_p7_textA,f1_p8_textA,f1_p9_textA,
                 f1_p1_textB,f1_p2_textB,f1_p3_textB,f1_p4_textB,f1_p5_textB,f1_p6_textB,f1_p7_textB,f1_p8_textB,f1_p9_textB,
                 f1_p1_textC,f1_p2_textC,f1_p3_textC,f1_p4_textC,f1_p5_textC,f1_p6_textC,f1_p7_textC,f1_p8_textC,f1_p9_textC,
@@ -50,7 +52,8 @@ private:
                 f1_p1_sprtC2,f1_p2_sprtC2,f1_p3_sprtC2,f1_p4_sprtC2,f1_p5_sprtC2,f1_p6_sprtC2,f1_p7_sprtC2,f1_p8_sprtC2,f1_p9_sprtC2,
                 sprite_frontal1,sprite_frontal2,sprite_frontal3,sprite_frontal4,sprite_frontal5,sprite_frontal6,sprite_frontal7,sprite_frontal8,sprite_frontal9;
 
-
+    sf::Texture prin;
+    sf::Sprite prinn;
 
     int inicializar();
     void eventos();

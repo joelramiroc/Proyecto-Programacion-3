@@ -10,7 +10,7 @@ void WithTimeEasy:: comparations()
 {
 
 };
-void WithTimeEasy:: guardar()
+void WithTimeEasy:: guardar(string nombre, int ganados, int perdidos)
 {
 
 };
@@ -32,3 +32,15 @@ void WithTimeEasy::events()
 {
 
 };
+
+void WithTimeEasy::playAgain()
+{
+};
+
+void WithTimeEasy::act(){};
+
+void WithTimeEasy:: lost(){};
+
+void WithTimeEasy:: win(){};
+
+void WithTimeEasy:: scramble(){};

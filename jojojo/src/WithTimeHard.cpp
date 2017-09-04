@@ -10,7 +10,7 @@ void WithTimeHard:: comparations()
 {
 
 };
-void WithTimeHard:: guardar()
+void WithTimeHard:: guardar(string nombre, int ganados, int perdidos)
 {
 
 };
@@ -33,3 +33,14 @@ void WithTimeHard::events()
 
 };
 
+void WithTimeHard::playAgain()
+{
+};
+
+void WithTimeHard::act(){};
+
+void WithTimeHard:: lost(){};
+
+void WithTimeHard:: win(){};
+
+void WithTimeHard:: scramble(){};

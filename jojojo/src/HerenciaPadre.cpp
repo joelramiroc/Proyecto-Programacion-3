@@ -23,7 +23,6 @@ HerenciaPadre::HerenciaPadre()
     this->f=false;
     this->ff=false;
     this->typeGame="";
-    this->archivo="";
     this->nivelDificultad="";
     this->nombreJugador="";
     this->ganados=0;

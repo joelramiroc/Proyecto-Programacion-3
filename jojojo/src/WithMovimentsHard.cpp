@@ -9,7 +9,7 @@ void WithMovimentsHard:: comparations()
 {
 
 };
-void WithMovimentsHard:: guardar()
+void WithMovimentsHard:: guardar(string nombre, int ganados, int perdidos)
 {
 
 };
@@ -31,3 +31,15 @@ void WithMovimentsHard::events()
 {
 
 };
+
+void WithMovimentsHard::playAgain()
+{
+};
+
+void WithMovimentsHard::act(){};
+
+void WithMovimentsHard:: lost(){};
+
+void WithMovimentsHard:: win(){};
+
+void WithMovimentsHard:: scramble(){};

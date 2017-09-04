@@ -9,7 +9,7 @@ void WithMovimentsNormal:: comparations()
 {
 
 };
-void WithMovimentsNormal:: guardar()
+void WithMovimentsNormal:: guardar(string nombre, int ganados, int perdidos)
 {
 
 };
@@ -31,3 +31,15 @@ void WithMovimentsNormal::events()
 {
 
 };
+
+void WithMovimentsNormal::playAgain()
+{
+};
+
+void WithMovimentsNormal::act(){};
+
+void WithMovimentsNormal:: lost(){};
+
+void WithMovimentsNormal:: win(){};
+
+void WithMovimentsNormal:: scramble(){};

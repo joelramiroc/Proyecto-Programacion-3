@@ -51,6 +51,7 @@
 		<Unit filename="include/Centro.h" />
 		<Unit filename="include/Cube.h" />
 		<Unit filename="include/HerenciaPadre.h" />
+		<Unit filename="include/InfoPlayer.h" />
 		<Unit filename="include/Libre.h" />
 		<Unit filename="include/Piece.h" />
 		<Unit filename="include/PieceFaces.h" />
@@ -69,6 +70,7 @@
 		<Unit filename="src/Centro.cpp" />
 		<Unit filename="src/Cube.cpp" />
 		<Unit filename="src/HerenciaPadre.cpp" />
+		<Unit filename="src/InfoPlayer.cpp" />
 		<Unit filename="src/Libre.cpp" />
 		<Unit filename="src/Piece.cpp" />
 		<Unit filename="src/PieceFaces.cpp" />

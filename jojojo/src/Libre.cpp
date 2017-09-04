@@ -1,13 +1,65 @@
 #include "Libre.h"
-
 Libre::Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_):window_(window_)
 {
     this->cube=cube;
     this->temp=&drawables;
     this->score=0;
-    this->archivo="CompetenciaLibre";
     this->typeGame="Libre";
-    ofstream nombreArchivo(archivo);
+}
+
+void Libre::playAgain()
+{
+};
+
+void Libre::scramble()
+{
+l=true;d=true;b=true;update();
+m=true;r=true;t=true;update();
+u=true;s=true;r=true;update();
+b=true;f=true;u=true;update();
+};
+
+void Libre::win()
+{
+     if(!mun.loadFromFile("img/winded/1.png")){
+            }
+            prinn.setTexture(mun);
+            //prinn.setPosition(sf::Vector2f(375.f,200.f));
+            ((*temp)["win"])=&prinn;
+            act();
+        /*sf::Clock clock;
+        sf::Time elapsed1 = clock.getElapsedTime();
+        while(elapsed1.asSeconds()<10)
+        {
+            elapsed1 = clock.getElapsedTime();
+            if(elapsed1.asSeconds()<4)
+            {
+
+
+            }
+            /*else if(elapsed1.asSeconds()>5)
+            {
+                if(!prin.loadFromFile("img/winded/5.png")){
+                };
+                munn.setTexture(prin);
+                ((*temp)["win"])=&munn;
+                act();
+            }
+            elapsed1 = clock.getElapsedTime();
+        }
+        clock.restart();*/
+        endGame=true;
+}
+
+void Libre::lost()
+{
+     if(!prin.loadFromFile("img/gameOver.png")){
+        return;
+     };
+     prinn.setTexture(prin);
+     prinn.setPosition(sf::Vector2f(375.f,200.f));
+     ((*temp)["win"])=&prinn;
+     endGame=true;
 }
 
 void Libre::comparations()
@@ -103,7 +155,10 @@ void Libre::comparations()
                                && sp5Derecha==sp6Derecha && sp6Derecha==sp7Derecha && sp7Derecha==sp8Derecha && sp8Derecha==sp9Derecha
                                )
                              {
-                                 cout<<"Reto completado. "<<endl;
+                            ////////////////////////////////////
+                                //lost();
+                                win();
+                                guardar("Joel",1,0);
                              }
 
 
@@ -122,44 +177,6 @@ void Libre::comparations()
 
 
 };
-
-void Libre::guardar()
-{
-
-};
-
-void Libre::info()
-{
-
-};
-
-void Libre::events()
-{
-    while(window_.pollEvent(miEvento))
-    {
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::R)
-            r=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::L)
-            l=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::F)
-            f=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::B)
-            b=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::U)
-            u=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::D)
-            d=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::S)
-            s=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::T)
-            t=true;
-        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::M)
-            m=true;
-
-
-    }
-};
-
 
 void Libre::act()
 {
@@ -436,17 +453,17 @@ void Libre::update()
 
     if(l)
     {
-        cube->movements(&(cube->p1),&(cube->p7),&(cube->p24),&(cube->p18));
-        cube->p1->MovementArriba();
-        cube->p7->MovementArriba();
-        cube->p18->MovementArriba();
-        cube->p24->MovementArriba();
+        cube->movements(&(cube->p1),&(cube->p18),&(cube->p24),&(cube->p7));
+        cube->p1->MovementAbajo();
+        cube->p7->MovementAbajo();
+        cube->p18->MovementAbajo();
+        cube->p24->MovementAbajo();
 
-        cube->movements(&(cube->p4),&(cube->p16),&(cube->p21),&(cube->p10));
-        cube->p4->MovementArriba();
-        cube->p16->MovementArriba();
-        cube->p21->MovementArriba();
-        cube->p10->MovementArriba();
+        cube->movements(&(cube->p4),&(cube->p10),&(cube->p21),&(cube->p16));
+        cube->p4->MovementAbajo();
+        cube->p16->MovementAbajo();
+        cube->p21->MovementAbajo();
+        cube->p10->MovementAbajo();
 
         act();
         l=false;
@@ -460,6 +477,72 @@ void Libre::update()
 
 };
 
+void Libre::guardar(string nombre, int ganados, int perdidos)
+{
+    //window_->agregar(info);
+};
+
+void Libre::info()
+{
+
+};
+
+void Libre::events()
+{
+    while(window_.pollEvent(miEvento))
+    {
+        if(endGame!=true)
+            {
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::R)
+                {
+                    contara++;
+                    r=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::L)
+                {
+                    contara++;
+                    l=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::F)
+                {
+                    contara++;
+                    f=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::B)
+                {
+                    contara++;
+                    b=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::U)
+                {
+                    contara++;
+                    u=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::D)
+                {
+                    contara++;
+                    d=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::S)
+                {
+                    contara++;
+                    s=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::T)
+                {
+                    contara++;
+                    t=true;
+                }
+            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::M)
+                {
+                    contara++;
+                    m=true;
+                }
+        }
+
+    }
+};
+
 void Libre::cleared()
 {
     window_.close();
@@ -467,12 +550,13 @@ void Libre::cleared()
 
 void Libre::loop()
 {
+    scramble();
     while(repetir)
     {
+        cout<<contara<<endl;
         events();
         update();
         comparations();
     }
         cleared();
 };
-
