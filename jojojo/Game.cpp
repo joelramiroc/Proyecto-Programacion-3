@@ -505,6 +505,7 @@ void Game::update()
         return;
     }
     playing->loop();
+    isPlay=false;
 }
 void Game::render()
 {
@@ -527,5 +528,4 @@ void Game::run()
         update();
         render();
     }
-    cleared();
 }

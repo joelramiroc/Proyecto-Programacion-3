@@ -397,18 +397,19 @@
 1502331794 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\test.cpp
 	<SFML/Graphics.hpp>
 
-1504482950 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
+1504584854 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
 	<SFML/Graphics.hpp>
 	"Game.h"
 	"Window.h"
+	"MenuPrincipal.h"
 	<memory>
 	<iostream>
 
-1504481025 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1504617266 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
-1504232758 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
+1504576872 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
 	<SFML/Graphics.hpp>
 	"Window.h"
 	<vector>
@@ -432,11 +433,13 @@
 1504216355 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
-1504496640 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
+1504529317 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
 	<iostream>
 	<fstream>
 	<SFML/Graphics.hpp>
 	<vector>
+	<stdlib.h>
+	<time.h>
 	"Window.h"
 	"InfoPlayer.h"
 
@@ -471,7 +474,7 @@
 	"HerenciaPadre.h"
 	<iostream>
 
-1504497180 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmovimentseasy.cpp
+1504617266 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmovimentseasy.cpp
 	"WithMovimentsEasy.h"
 	"WithMoviments.h"
 
@@ -494,7 +497,7 @@
 	"WithMoviments.h"
 	"HerenciaPadre.h"
 
-1504496828 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+1504497280 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
 	"Libre.h"
 
 1504496700 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
@@ -570,4 +573,12 @@
 
 1504226440 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\infoplayer.cpp
 	"InfoPlayer.h"
+
+1504579383 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\menuprincipal.cpp
+	"MenuPrincipal.h"
+
+1504577874 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\menuprincipal.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"../Game.h"
 

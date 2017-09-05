@@ -1,5 +1,4 @@
 #include "WithMovimentsEasy.h"
-
 #include "WithMoviments.h"
 
 WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_):window_(window_)
@@ -9,6 +8,17 @@ WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube*
     this->score=0;
     this->contara=1000;
     this->typeGame="WithMovimentsEasy";
+
+    if(!prin.loadFromFile("img/winded/1.png")){
+        }
+        prinn.setTexture(prin);
+        prinn.setPosition(sf::Vector2f(375.f,200.f));
+
+    if(!mun.loadFromFile("img/winded/5.png")){
+                };
+                munn.setTexture(mun);
+                munn.setPosition(sf::Vector2f(375.f,200.f));
+
 
     if(!nivel.loadFromFile("fonts/fast99.ttf")){
             return;
@@ -99,41 +109,67 @@ WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube*
 
 void WithMovimentsEasy::scramble()
 {
-l=true;d=true;
-b=true;update();
-m=true;r=true;t=true;update();
-u=true;s=true;r=true;update();
-b=true;f=true;u=true;update();
+    srand(time(NULL));
+    int num=1+rand()%(7-1);
+    int contara=21;
+    while(contara!=0)
+    {
+        if(num==1)
+        {
+            r=true;
+            update();
+        }else if(num==2)
+        {
+            l=true;
+            update();
+        }else if(num==3)
+        {
+            u=true;
+            update();
+
+        }else if(num==4)
+        {
+            d=true;
+            update();
+
+        }else if(num==5)
+        {
+            f=true;
+            update();
+
+        }else if(num==6)
+        {
+            b=true;
+            update();
+        }
+        contara--;
+        num=1+rand()%(7-1);
+    }
+
 };
 
 void WithMovimentsEasy::win()
 {
-     /*f(!mun.loadFromFile("img/winded/1.png")){
-            }
-            prinn.setTexture(mun);
-            prinn.setPosition(sf::Vector2f(375.f,200.f));
-            ((*temp)["win"])=&prinn;
-            window_.cleared();
-            window_.draw(*temp);
-            window_.display();
+        ((*temp)["win"])=&prinn;
+        window_.cleared();
+        window_.draw(*temp);
+        window_.display();
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
-        while(elapsed1.asSeconds()<10)
+        while(elapsed1.asSeconds()<4)
         {
             elapsed1 = clock.getElapsedTime();
              if(elapsed1.asSeconds()>2)
             {
-                if(!prin.loadFromFile("img/winded/5.png")){
-                };
-                munn.setTexture(prin);
-            (*(sf::Sprite*)((*temp)["win"]))=munn;
+
+            ((*temp)["win"])=&munn;
             window_.cleared();
             window_.draw(*temp);
             window_.display();
             }
         }
+        (*temp).erase("win");
         clock.restart();
-        endGame=true;*/
         if(!endGame)
         {
             guardar("Joel",1,0);
@@ -149,7 +185,7 @@ void WithMovimentsEasy::lost()
      };
      prinn.setTexture(prin);
      prinn.setPosition(sf::Vector2f(375.f,200.f));
-     ((*temp)["win"])=&prinn;
+     ((*temp)["lost"])=&prinn;
      if(!endGame)
         {
             guardar("Joel",0,1);
@@ -324,9 +360,6 @@ void WithMovimentsEasy::act()
     (*(sf::Sprite*)((*temp)["sprite_frontal8"])).setColor(*(cube->p19->positions["frente"]));
     (*(sf::Sprite*)((*temp)["sprite_frontal9"])).setColor(*(cube->p20->positions["frente"]));
     (*(sf::Text*)((*temp)["restante"])).setString(cantidadRestante);
-
-
-
 
 }
 
@@ -595,12 +628,8 @@ void WithMovimentsEasy::events()
             string disponibles="Disponibles: " + to_string(contara);
             mostrarRestante.setString(disponibles);
             ((*temp)["restante"])=&mostrarRestante;
-
-            //ELIMINAR MENSAJE DE GAME OVER Y DE WINN
-            //ELIMINAR MENSAJE DE GAME OVER Y DE WINN
-            //ELIMINAR MENSAJE DE GAME OVER Y DE WINN
-            //ELIMINAR MENSAJE DE GAME OVER Y DE WINN
-
+            (*temp).erase("win");
+            (*temp).erase("lost");
             update();
 
 
@@ -678,5 +707,4 @@ void WithMovimentsEasy::loop()
         update();
         comparations();
     }
-        cleared();
 };
