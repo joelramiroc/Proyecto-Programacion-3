@@ -35,10 +35,8 @@ public:
     HerenciaPadre();
     sf::Font tipo,nivel,restante,salir,nombreP,ganadosP,perdidosP,playA;
     sf::Text mostrarTipo,mostrarNivel,mostrarRestante,mostrarSalir,mostrarGa,MostrarPe,mostrarNom,mostrarPlayAgain;
-    sf::Texture prin;
-    sf::Sprite prinn;
-    sf::Texture mun;
-    sf::Sprite munn;
+    vector<sf::Sprite*> gifWin;
+    vector<sf::Texture*> imgWin;
     string cantidadRestante;
 };
 

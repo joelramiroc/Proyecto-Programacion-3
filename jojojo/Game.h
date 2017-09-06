@@ -60,7 +60,7 @@ private:
     void update();
     void render();
     void cleared();
-
+    string randomName();
 public:
 
     Game(Window& window);

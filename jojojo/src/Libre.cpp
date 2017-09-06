@@ -21,44 +21,18 @@ b=true;f=true;u=true;update();
 
 void Libre::win()
 {
-     if(!mun.loadFromFile("img/winded/1.png")){
-            }
-            prinn.setTexture(mun);
-            //prinn.setPosition(sf::Vector2f(375.f,200.f));
-            ((*temp)["win"])=&prinn;
-            act();
-        /*sf::Clock clock;
-        sf::Time elapsed1 = clock.getElapsedTime();
-        while(elapsed1.asSeconds()<10)
-        {
-            elapsed1 = clock.getElapsedTime();
-            if(elapsed1.asSeconds()<4)
-            {
 
-
-            }
-            /*else if(elapsed1.asSeconds()>5)
-            {
-                if(!prin.loadFromFile("img/winded/5.png")){
-                };
-                munn.setTexture(prin);
-                ((*temp)["win"])=&munn;
-                act();
-            }
-            elapsed1 = clock.getElapsedTime();
-        }
-        clock.restart();*/
         endGame=true;
 }
 
 void Libre::lost()
 {
-     if(!prin.loadFromFile("img/gameOver.png")){
+     /*if(!prin.loadFromFile("img/gameOver.png")){
         return;
      };
      prinn.setTexture(prin);
      prinn.setPosition(sf::Vector2f(375.f,200.f));
-     ((*temp)["win"])=&prinn;
+     ((*temp)["win"])=&prinn;*/
      endGame=true;
 }
 

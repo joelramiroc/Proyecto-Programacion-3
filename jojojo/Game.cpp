@@ -491,7 +491,7 @@ void Game::update()
     }
     else if(tipo=="WithMovimentsEasy")
     {
-        playing= new WithMovimentsEasy(drawables,cube,window_);
+        playing= new WithMovimentsEasy(drawables,cube,window_,randomName());
     }
     else if(tipo=="WithMovimentsNormal")
     {
@@ -512,6 +512,22 @@ void Game::render()
     window_.clear(sf::Color::Black);
     window_.draw(drawables);
     window_.display();
+}
+
+string Game::randomName()
+{
+    string nameR="Player";
+    srand(time(NULL));
+    int num=1+rand()%(10-0);
+    int contara=2;
+    while(contara!=0)
+    {
+        nameR=nameR+to_string(num);
+        num=1+rand()%(10-0);
+        contara--;
+    }
+
+    return nameR;
 }
 
 void Game::cleared()

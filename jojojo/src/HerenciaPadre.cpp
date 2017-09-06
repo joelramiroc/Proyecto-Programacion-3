@@ -35,4 +35,15 @@ HerenciaPadre::HerenciaPadre()
     this->rojo=5;
     this->naranja=6;
     this->noExiste=0;
+    for(int i=0;i<6;i++)
+    {
+        string n= to_string(i+1);
+        string total="img/winded/"+n+".png";
+        imgWin.push_back(new sf::Texture);
+        gifWin.push_back(new sf::Sprite);
+         if(!(imgWin[i])->loadFromFile(total)){
+                };
+        (gifWin[i])->setTexture(*(imgWin[i]));
+        (gifWin[i])->setPosition(sf::Vector2f(375.f,200.f));
+    }
 }

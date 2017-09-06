@@ -1,23 +1,14 @@
 #include "WithMovimentsEasy.h"
 #include "WithMoviments.h"
 
-WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_):window_(window_)
+WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,string nombrePlayer):window_(window_)
 {
+    this->nombreJugador=nombrePlayer;
     this->cube=cube;
     this->temp=&drawables;
     this->score=0;
     this->contara=1000;
     this->typeGame="WithMovimentsEasy";
-
-    if(!prin.loadFromFile("img/winded/1.png")){
-        }
-        prinn.setTexture(prin);
-        prinn.setPosition(sf::Vector2f(375.f,200.f));
-
-    if(!mun.loadFromFile("img/winded/5.png")){
-                };
-                munn.setTexture(mun);
-                munn.setPosition(sf::Vector2f(375.f,200.f));
 
 
     if(!nivel.loadFromFile("fonts/fast99.ttf")){
@@ -103,13 +94,13 @@ WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube*
     MostrarPe.setPosition(sf::Vector2f(950.f,160.f));
     ((*temp)["perdidosP"])=&MostrarPe;
 
-    guardar("Joel",0,0);
+    guardar(nombreJugador,0,0);
 
 }
 
 void WithMovimentsEasy::scramble()
 {
-    srand(time(NULL));
+   /* srand(time(NULL));
     int num=1+rand()%(7-1);
     int contara=21;
     while(contara!=0)
@@ -145,50 +136,92 @@ void WithMovimentsEasy::scramble()
         contara--;
         num=1+rand()%(7-1);
     }
-
+*/
 };
 
 void WithMovimentsEasy::win()
 {
-        ((*temp)["win"])=&prinn;
-        window_.cleared();
-        window_.draw(*temp);
-        window_.display();
+    if(!endGame)
+    {
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
+
         while(elapsed1.asSeconds()<4)
         {
             elapsed1 = clock.getElapsedTime();
-             if(elapsed1.asSeconds()>2)
-            {
 
-            ((*temp)["win"])=&munn;
-            window_.cleared();
-            window_.draw(*temp);
-            window_.display();
+             if(elapsed1.asMilliseconds()<500)
+            {
+                ((*temp)["win"])=(gifWin[0]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1000)
+            {
+                ((*temp)["win"])=(gifWin[1]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1500)
+            {
+                ((*temp)["win"])=(gifWin[2]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<2000)
+            {
+                ((*temp)["win"])=(gifWin[3]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<2500)
+            {
+                ((*temp)["win"])=(gifWin[4]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<3000)
+            {
+                ((*temp)["win"])=(gifWin[5]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<3500)
+            {
+                ((*temp)["win"])=(gifWin[2]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<4000)
+            {
+                ((*temp)["win"])=(gifWin[1]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
             }
-        }
-        (*temp).erase("win");
-        clock.restart();
+
+        //(*temp).erase("win");
         if(!endGame)
         {
-            guardar("Joel",1,0);
+            guardar(nombreJugador,1,0);
             endGame=true;
         }
 
+        }
+}
 }
 
 void WithMovimentsEasy::lost()
 {
-     if(!prin.loadFromFile("img/gameOver.png")){
+/*     if(!prin.loadFromFile("img/gameOver.png")){
         return;
      };
      prinn.setTexture(prin);
      prinn.setPosition(sf::Vector2f(375.f,200.f));
-     ((*temp)["lost"])=&prinn;
+     ((*temp)["lost"])=&prinn;*/
      if(!endGame)
         {
-            guardar("Joel",0,1);
+            guardar(nombreJugador,0,1);
             endGame=true;
         }
 }

@@ -7,7 +7,7 @@
 class WithMovimentsEasy:public WithMoviments
 {
     public:
-        WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_);
+        WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,string nombrePlayer);
         void comparations();
         void guardar(string nombre, int ganados, int perdidos);
         void cleared();
