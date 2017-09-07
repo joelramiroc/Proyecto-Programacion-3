@@ -472,12 +472,12 @@ void Game::eventos()
 void Game::update()
 {
     HerenciaPadre* playing=NULL;
-    string tipo= "WithTimeEasy";
+    string tipo= "WithMovimentsHard";
     string nivel="";
     string tipoOfGame="";
     if(tipo=="Libre")
     {
-        playing = new Libre(drawables,cube,window_);
+        playing = new Libre(drawables,cube,window_,randomName());
     }else if(tipo=="WithTimeEasy")
     {
         nivel="Facil";

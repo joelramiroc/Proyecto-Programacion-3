@@ -31,6 +31,7 @@ HerenciaPadre::HerenciaPadre()
     this->blanco=1;
     this->amarillo=2;
     this->verde=3;
+    this->endGame=false;
     this->azul=4;
     this->rojo=5;
     this->naranja=6;

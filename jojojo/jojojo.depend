@@ -405,7 +405,7 @@
 	<memory>
 	<iostream>
 
-1504760169 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1504792665 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
@@ -430,7 +430,7 @@
 	<map>
 	<iostream>
 
-1504750473 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
+1504791879 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
 1504753138 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
@@ -469,10 +469,10 @@
 1504496702 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimenormal.h
 	"WithTime.h"
 
-1504758659 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmoviments.cpp
+1504793515 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmoviments.cpp
 	"WithMoviments.h"
 
-1504757488 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmoviments.h
+1504790605 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmoviments.h
 	"HerenciaPadre.h"
 	<iostream>
 	"Cube.h"
@@ -506,10 +506,10 @@
 	"HerenciaPadre.h"
 	"Cube.h"
 
-1504750487 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+1504793540 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
 	"Libre.h"
 
-1504496700 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
+1504790876 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
 	"HerenciaPadre.h"
 	<vector>
 	<SFML/Graphics.hpp>
@@ -525,7 +525,7 @@
 	"InfoPlayer.h"
 	<string.h>
 
-1504747104 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
+1504824229 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
 	"Window.h"
 
 1503520521 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\spriteobjet.h

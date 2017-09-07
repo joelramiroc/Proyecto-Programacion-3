@@ -10,8 +10,7 @@ using namespace std;
 class Libre:public HerenciaPadre
 {
     public:
-
-        Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_);
+        Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,string nombrePlayer);
         void comparations();
         void guardar(string nombre, int ganados, int perdidos);
         void cleared();
@@ -20,12 +19,11 @@ class Libre:public HerenciaPadre
         void update();
         void events();
         void act();
-        void lost();
+        void lost(){};
         void scramble();
-        void playAgain();
         void win();
+        void playAgain();
         Cube* cube;
-        int contara=0;
         Window window_;
         map<string,sf::Drawable*>* temp;
 };

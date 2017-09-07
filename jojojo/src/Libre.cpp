@@ -1,44 +1,152 @@
 #include "Libre.h"
-Libre::Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_):window_(window_)
+
+Libre::Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,string nombrePlayer):window_(window_)
 {
+    this->Dispon=0;
+    this->nombreJugador=nombrePlayer;
     this->cube=cube;
     this->temp=&drawables;
-    this->Dispon=0;
-    this->typeGame="Libre";
-}
+    this->contara=Dispon;
+    this->typeGame="LibreNormal";
 
-void Libre::playAgain()
-{
-};
+    mostrarNivel.setString("Libre");
+    ((*temp)["nivel"])=&mostrarNivel;
+    mostrarTipo.setString("Sin Limites");
+    ((*temp)["tipo"])=&mostrarTipo;
+    mostrarRestante.setString(cantidadRestante);
+    cantidadRestante = "Realizados: " + to_string(Dispon);
+    ((*temp)["restante"])=&mostrarRestante;
+    ((*temp)["salir"])=&mostrarSalir;
+    ((*temp)["playAgain"])=&mostrarPlayAgain;
+    ((*temp)["nombreP"])=&mostrarNom;
+    ((*temp)["ganadosP"])=&mostrarGa;
+    ((*temp)["perdidosP"])=&MostrarPe;
+    update();
+    guardar(nombreJugador,0,0);
+}
 
 void Libre::scramble()
 {
-l=true;d=true;b=true;update();
-m=true;r=true;t=true;update();
-u=true;s=true;r=true;update();
-b=true;f=true;u=true;update();
+    srand(time(NULL));
+    int num=1+rand()%(7-1);
+    int contara=21;
+    while(contara!=0)
+    {
+        if(num==1)
+        {
+            r=true;
+            update();
+        }else if(num==2)
+        {
+            l=true;
+            update();
+        }else if(num==3)
+        {
+            u=true;
+            update();
+
+        }else if(num==4)
+        {
+            d=true;
+            update();
+
+        }else if(num==5)
+        {
+            f=true;
+            update();
+
+        }else if(num==6)
+        {
+            b=true;
+            update();
+        }
+        contara--;
+        num=1+rand()%(7-1);
+    }
 };
 
 void Libre::win()
 {
+    if(!endGame)
+    {
+        guardar(nombreJugador,1,0);
+        sf::Clock clock;
+        sf::Time elapsed1 = clock.getElapsedTime();
 
+        while(elapsed1.asSeconds()<2)
+        {
+            elapsed1 = clock.getElapsedTime();
+             if(elapsed1.asMilliseconds()<250)
+            {
+                ((*temp)["win"])=(gifWin[0]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<500)
+            {
+                ((*temp)["win"])=(gifWin[1]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<750)
+            {
+                ((*temp)["win"])=(gifWin[2]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1000)
+            {
+                ((*temp)["win"])=(gifWin[3]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1250)
+            {
+                ((*temp)["win"])=(gifWin[4]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1500)
+            {
+                ((*temp)["win"])=(gifWin[5]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1750)
+            {
+                ((*temp)["win"])=(gifWin[2]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<2000)
+            {
+                ((*temp)["win"])=(gifWin[1]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }
+
+        }
         endGame=true;
+    }
+
 }
 
-void Libre::lost()
+void Libre::playAgain()
 {
-     /*if(!prin.loadFromFile("img/gameOver.png")){
-        return;
-     };
-     prinn.setTexture(prin);
-     prinn.setPosition(sf::Vector2f(375.f,200.f));
-     ((*temp)["win"])=&prinn;*/
-     endGame=true;
-}
+    endGame=false;
+    Dispon=0;
+    contara=0;
+    string disponibles="Realizados: " + to_string(Dispon);
+    mostrarRestante.setString(disponibles);
+    ((*temp)["restante"])=&mostrarRestante;
+    (*temp).erase("win");
+    (*temp).erase("lost");
+    update();
+};
 
 void Libre::comparations()
 {
-
     sf::Color sp1Frontal=(*(sf::Sprite*)((*temp)["f1_p1_sprtC"])).getColor();
     sf::Color sp2Frontal=(*(sf::Sprite*)((*temp)["f1_p2_sprtC"])).getColor();
     sf::Color sp3Frontal=(*(sf::Sprite*)((*temp)["f1_p3_sprtC"])).getColor();
@@ -103,18 +211,14 @@ void Libre::comparations()
        && sp5Arriba==sp6Arriba && sp6Arriba==sp7Arriba && sp7Arriba==sp8Arriba && sp8Arriba==sp9Arriba
        )
     {
-
         if(sp1Abajo==sp2Abajo && sp2Abajo==sp3Abajo && sp3Abajo==sp4Abajo && sp4Abajo==sp5Abajo
            && sp5Abajo==sp6Abajo && sp6Abajo==sp7Abajo && sp7Abajo==sp8Abajo && sp8Abajo==sp9Abajo
            )
         {
-
-
              if(sp1Frontal==sp2Frontal && sp2Frontal==sp3Frontal && sp3Frontal==sp4Frontal && sp4Frontal==sp5Frontal
                && sp5Frontal==sp6Frontal && sp6Frontal==sp7Frontal && sp7Frontal==sp8Frontal && sp8Frontal==sp9Frontal
                )
             {
-
                      if(sp1Atras==sp2Atras && sp2Atras==sp3Atras && sp3Atras==sp4Atras && sp4Atras==sp5Atras
                        && sp5Atras==sp6Atras && sp6Atras==sp7Atras && sp7Atras==sp8Atras && sp8Atras==sp9Atras
                        )
@@ -129,27 +233,13 @@ void Libre::comparations()
                                && sp5Derecha==sp6Derecha && sp6Derecha==sp7Derecha && sp7Derecha==sp8Derecha && sp8Derecha==sp9Derecha
                                )
                              {
-                            ////////////////////////////////////
-                                //lost();
                                 win();
-                                guardar("Joel",1,0);
                              }
-
-
                         }
-
-
                     }
-
-
                 }
-
             }
-
-
         }
-
-
 };
 
 void Libre::act()
@@ -217,10 +307,7 @@ void Libre::act()
     (*(sf::Sprite*)((*temp)["sprite_frontal7"])).setColor(*(cube->p18->positions["frente"]));
     (*(sf::Sprite*)((*temp)["sprite_frontal8"])).setColor(*(cube->p19->positions["frente"]));
     (*(sf::Sprite*)((*temp)["sprite_frontal9"])).setColor(*(cube->p20->positions["frente"]));
-
-
-
-
+    (*(sf::Text*)((*temp)["restante"])).setString(cantidadRestante);
 
 }
 
@@ -453,67 +540,89 @@ void Libre::update()
 
 void Libre::guardar(string nombre, int ganados, int perdidos)
 {
-    //window_->agregar(info);
+    InfoPlayer* enviar= new InfoPlayer();
+    enviar->nombre=nombre;
+    enviar->ganados=ganados;
+    enviar->perdidos=perdidos;
+    window_.agregar(enviar);
+
+    InfoPlayer*recibir=window_.buscar(nombre);
+    string nombreN= "Nombre: " + nombre;
+    string ganadosN= "Ganados: " + to_string(recibir->ganados);
+    string perdidosN= "Perdidos: " + to_string(recibir->perdidos);
+
+    (*(sf::Text*)((*temp)["nombreP"])).setString(nombreN);
+    (*(sf::Text*)((*temp)["ganadosP"])).setString(ganadosN);
+    (*(sf::Text*)((*temp)["perdidosP"])).setString(perdidosN);
+
+
 };
 
 void Libre::info()
 {
-
+    Dispon++;
+    cantidadRestante = "Realizados: " + to_string(Dispon);
 };
 
 void Libre::events()
 {
     while(window_.pollEvent(miEvento))
     {
-        if(endGame!=true)
-            {
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::R)
-                {
-                    contara++;
-                    r=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::L)
-                {
-                    contara++;
-                    l=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::F)
-                {
-                    contara++;
-                    f=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::B)
-                {
-                    contara++;
-                    b=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::U)
-                {
-                    contara++;
-                    u=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::D)
-                {
-                    contara++;
-                    d=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::S)
-                {
-                    contara++;
-                    s=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::T)
-                {
-                    contara++;
-                    t=true;
-                }
-            if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::M)
-                {
-                    contara++;
-                    m=true;
-                }
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::LShift)
+        {
+            playAgain();
+            scramble();
         }
-
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::Q)
+                    repetir=false;
+            if(endGame!=true)
+            {
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::R)
+                    {
+                        info();
+                        r=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::L)
+                    {
+                        info();
+                        l=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::F)
+                    {
+                        info();
+                        f=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::B)
+                    {
+                        info();
+                        b=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::U)
+                    {
+                        info();
+                        u=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::D)
+                    {
+                        info();
+                        d=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::S)
+                    {
+                        info();
+                        s=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::T)
+                    {
+                        info();
+                        t=true;
+                    }
+                if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::M)
+                    {
+                        info();
+                        m=true;
+                    }
+            }
     }
 };
 
@@ -527,10 +636,8 @@ void Libre::loop()
     scramble();
     while(repetir)
     {
-        cout<<contara<<endl;
         events();
         update();
         comparations();
     }
-        cleared();
 };

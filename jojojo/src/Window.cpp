@@ -52,38 +52,34 @@ void Window::agregar(InfoPlayer *datosPlayer) {
     string nombre_archivo="Estadisticas";
     int TAMANO_REGISTRO=18;
     char nombre[10];
-    int ganados=0,perdidos=0,totalG,totalP;
+    int ganados=0,perdidos=0,totalG=0,totalP=0;
 
     ifstream in(nombre_archivo.c_str());
     in.seekg(0 * TAMANO_REGISTRO);
     int posicion=0;
+    int stellg=0;
     bool cont=true;
-    while(!in.eof() && cont)
-    {
-        in.read(nombre,10);
-        string ev=nombre;
-        if(ev==datosPlayer  ->nombre)
-        {
-            in.read((char*)&ganados,4);
-            in.read((char*)&perdidos,4);
-            cont=false;
-            posicion--;
+    while(!in.eof() && cont) {
+        stellg=in.tellg();
+        in.read(nombre, 10);
+        string ev = nombre;
+        if (ev == datosPlayer->nombre) {
+            in.read((char *) &ganados, 4);
+            in.read((char *) &perdidos, 4);
+            cont = false;
+        }else {
+            int t, t2;
+            in.read((char *) &t, 4);
+            in.read((char *) &t2, 4);
         }
-        int t,t2;
-        in.read((char*)&t,4);
-        in.read((char*)&t2,4);
-        posicion++;
+
     }
-    cout<<posicion<<endl;
+    posicion=stellg/18;
     ofstream out(nombre_archivo.c_str(),ios::in|ios::out);
     if(!out.is_open())
     {
         out.open(nombre_archivo.c_str());
     }
-    if(ganados==0 && perdidos==0) {
-        posicion--;
-    }
-
     totalG=ganados+datosPlayer->ganados;
     totalP=perdidos+datosPlayer->perdidos;
     out.seekp(posicion * TAMANO_REGISTRO);

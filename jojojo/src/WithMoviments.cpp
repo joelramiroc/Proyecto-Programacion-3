@@ -10,7 +10,7 @@ WithMoviments::WithMoviments(map<string,sf::Drawable*>& drawables, Cube* &cube,W
         this->Dispon=500;
     }else
     {
-        this->Dispon=250;
+        this->Dispon=2;
     }
     this->nombreJugador=nombrePlayer;
     this->cube=cube;
@@ -197,7 +197,7 @@ void WithMoviments::playAgain()
     ((*temp)["restante"])=&mostrarRestante;
     (*temp).erase("win");
     (*temp).erase("lost");
-            update();
+    update();
 };
 
 void WithMoviments::comparations()
