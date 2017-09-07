@@ -64,11 +64,14 @@ void Window::agregar(InfoPlayer *datosPlayer) {
         string ev=nombre;
         if(ev==datosPlayer  ->nombre)
         {
+            in.read((char*)&ganados,4);
+            in.read((char*)&perdidos,4);
             cont=false;
             posicion--;
         }
-        in.read((char*)&ganados,4);
-        in.read((char*)&perdidos,4);
+        int t,t2;
+        in.read((char*)&t,4);
+        in.read((char*)&t2,4);
         posicion++;
     }
     cout<<posicion<<endl;
@@ -76,6 +79,9 @@ void Window::agregar(InfoPlayer *datosPlayer) {
     if(!out.is_open())
     {
         out.open(nombre_archivo.c_str());
+    }
+    if(ganados==0 && perdidos==0) {
+        posicion--;
     }
 
     totalG=ganados+datosPlayer->ganados;

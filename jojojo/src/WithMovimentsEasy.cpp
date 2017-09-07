@@ -6,101 +6,29 @@ WithMovimentsEasy::WithMovimentsEasy(map<string,sf::Drawable*>& drawables, Cube*
     this->nombreJugador=nombrePlayer;
     this->cube=cube;
     this->temp=&drawables;
-    this->score=0;
-    this->contara=1000;
+    this->Dispon=1000;
+    this->contara=Dispon;
     this->typeGame="WithMovimentsEasy";
 
-
-    if(!nivel.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    mostrarNivel.setFont(nivel);
-    mostrarNivel.setCharacterSize(25);
     mostrarNivel.setString("Facil");
-    mostrarNivel.setColor(sf::Color::White);
-    mostrarNivel.setPosition(sf::Vector2f(1120.f,10.f));
     ((*temp)["nivel"])=&mostrarNivel;
-
-    if(!tipo.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    mostrarTipo.setFont(tipo);
-    mostrarTipo.setCharacterSize(25);
     mostrarTipo.setString("Con Movimientos");
-    mostrarTipo.setColor(sf::Color::White);
-    mostrarTipo.setPosition(sf::Vector2f(950.f,40.f));
     ((*temp)["tipo"])=&mostrarTipo;
-
-     if(!restante.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    cantidadRestante = "Disponibles: " + to_string(contara);
-    mostrarRestante.setFont(tipo);
-    mostrarRestante.setCharacterSize(25);
     mostrarRestante.setString(cantidadRestante);
-    mostrarRestante.setColor(sf::Color::White);
-    mostrarRestante.setPosition(sf::Vector2f(950.f,70.f));
+    cantidadRestante = "Disponibles: " + to_string(Dispon);
     ((*temp)["restante"])=&mostrarRestante;
-    update();
-
-    if(!salir.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    mostrarSalir.setFont(salir);
-    mostrarSalir.setCharacterSize(15);
-    mostrarSalir.setString("Presione Q para volver al menu");
-    mostrarSalir.setColor(sf::Color::White);
-    mostrarSalir.setPosition(sf::Vector2f(910.f,610.f));
     ((*temp)["salir"])=&mostrarSalir;
-
-    if(!playA.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    mostrarPlayAgain.setFont(playA);
-    mostrarPlayAgain.setCharacterSize(15);
-    mostrarPlayAgain.setString("Shitf: Jugar de nuevo");
-    mostrarPlayAgain.setColor(sf::Color::White);
-    mostrarPlayAgain.setPosition(sf::Vector2f(10.f,610.f));
     ((*temp)["playAgain"])=&mostrarPlayAgain;
-
-
-    if(!nombreP.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    mostrarNom.setFont(nombreP);
-    mostrarNom.setCharacterSize(15);
-    mostrarNom.setString("Nombre:");
-    mostrarNom.setColor(sf::Color::White);
-    mostrarNom.setPosition(sf::Vector2f(950.f,120.f));
     ((*temp)["nombreP"])=&mostrarNom;
-
-    if(!ganadosP.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    mostrarGa.setFont(ganadosP);
-    mostrarGa.setCharacterSize(15);
-    mostrarGa.setString("Ganados:");
-    mostrarGa.setColor(sf::Color::White);
-    mostrarGa.setPosition(sf::Vector2f(950.f,140.f));
     ((*temp)["ganadosP"])=&mostrarGa;
-
-    if(!perdidosP.loadFromFile("fonts/fast99.ttf")){
-            return;
-    }
-    MostrarPe.setFont(perdidosP);
-    MostrarPe.setCharacterSize(15);
-    MostrarPe.setString("Perdidos:");
-    MostrarPe.setColor(sf::Color::White);
-    MostrarPe.setPosition(sf::Vector2f(950.f,160.f));
     ((*temp)["perdidosP"])=&MostrarPe;
-
+    update();
     guardar(nombreJugador,0,0);
-
 }
 
 void WithMovimentsEasy::scramble()
 {
-   /* srand(time(NULL));
+    srand(time(NULL));
     int num=1+rand()%(7-1);
     int contara=21;
     while(contara!=0)
@@ -136,33 +64,56 @@ void WithMovimentsEasy::scramble()
         contara--;
         num=1+rand()%(7-1);
     }
-*/
 };
 
 void WithMovimentsEasy::win()
 {
     if(!endGame)
     {
+        guardar(nombreJugador,1,0);
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
 
-        while(elapsed1.asSeconds()<4)
+        while(elapsed1.asSeconds()<2)
         {
             elapsed1 = clock.getElapsedTime();
-
-             if(elapsed1.asMilliseconds()<500)
+             if(elapsed1.asMilliseconds()<250)
             {
                 ((*temp)["win"])=(gifWin[0]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
-            }else if(elapsed1.asMilliseconds()<1000)
+            }else if(elapsed1.asMilliseconds()<500)
             {
                 ((*temp)["win"])=(gifWin[1]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
+            }else if(elapsed1.asMilliseconds()<750)
+            {
+                ((*temp)["win"])=(gifWin[2]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1000)
+            {
+                ((*temp)["win"])=(gifWin[3]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1250)
+            {
+                ((*temp)["win"])=(gifWin[4]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
             }else if(elapsed1.asMilliseconds()<1500)
+            {
+                ((*temp)["win"])=(gifWin[5]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1750)
             {
                 ((*temp)["win"])=(gifWin[2]);
                 window_.cleared();
@@ -170,64 +121,75 @@ void WithMovimentsEasy::win()
                 window_.display();
             }else if(elapsed1.asMilliseconds()<2000)
             {
-                ((*temp)["win"])=(gifWin[3]);
-                window_.cleared();
-                window_.draw(*temp);
-                window_.display();
-            }else if(elapsed1.asMilliseconds()<2500)
-            {
-                ((*temp)["win"])=(gifWin[4]);
-                window_.cleared();
-                window_.draw(*temp);
-                window_.display();
-            }else if(elapsed1.asMilliseconds()<3000)
-            {
-                ((*temp)["win"])=(gifWin[5]);
-                window_.cleared();
-                window_.draw(*temp);
-                window_.display();
-            }else if(elapsed1.asMilliseconds()<3500)
-            {
-                ((*temp)["win"])=(gifWin[2]);
-                window_.cleared();
-                window_.draw(*temp);
-                window_.display();
-            }else if(elapsed1.asMilliseconds()<4000)
-            {
                 ((*temp)["win"])=(gifWin[1]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
             }
 
-        //(*temp).erase("win");
-        if(!endGame)
-        {
-            guardar(nombreJugador,1,0);
-            endGame=true;
         }
+        endGame=true;
+    }
 
-        }
-}
 }
 
 void WithMovimentsEasy::lost()
 {
-/*     if(!prin.loadFromFile("img/gameOver.png")){
-        return;
-     };
-     prinn.setTexture(prin);
-     prinn.setPosition(sf::Vector2f(375.f,200.f));
-     ((*temp)["lost"])=&prinn;*/
-     if(!endGame)
+    if(!endGame)
+    {
+        guardar(nombreJugador,0,1);
+        sf::Clock clock;
+        sf::Time elapsed1 = clock.getElapsedTime();
+
+        while(elapsed1.asSeconds()<2)
         {
-            guardar(nombreJugador,0,1);
-            endGame=true;
+            elapsed1 = clock.getElapsedTime();
+             if(elapsed1.asMilliseconds()<250)
+            {
+                ((*temp)["win"])=(gifLost[0]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<500)
+            {
+                ((*temp)["win"])=(gifLost[1]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<750)
+            {
+                ((*temp)["win"])=(gifLost[2]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1000)
+            {
+                ((*temp)["win"])=(gifLost[3]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1250)
+            {
+                ((*temp)["win"])=(gifLost[4]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }
         }
+        endGame=true;
+    }
 }
 
 void WithMovimentsEasy::playAgain()
 {
+    endGame=false;
+    Dispon=contara;
+    string disponibles="Disponibles: " + to_string(Dispon);
+    mostrarRestante.setString(disponibles);
+    ((*temp)["restante"])=&mostrarRestante;
+    (*temp).erase("win");
+    (*temp).erase("lost");
+            update();
 };
 
 void WithMovimentsEasy::comparations()
@@ -645,8 +607,8 @@ void WithMovimentsEasy::guardar(string nombre, int ganados, int perdidos)
 
 void WithMovimentsEasy::info()
 {
-    contara--;
-    cantidadRestante = "Disponibles: " + to_string(contara);
+    Dispon--;
+    cantidadRestante = "Disponibles: " + to_string(Dispon);
 };
 
 void WithMovimentsEasy::events()
@@ -655,23 +617,14 @@ void WithMovimentsEasy::events()
     {
         if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::LShift)
         {
+            playAgain();
             scramble();
-            endGame=false;
-            contara=1000;
-            string disponibles="Disponibles: " + to_string(contara);
-            mostrarRestante.setString(disponibles);
-            ((*temp)["restante"])=&mostrarRestante;
-            (*temp).erase("win");
-            (*temp).erase("lost");
-            update();
-
-
         }
         if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::Q)
                     repetir=false;
             if(endGame!=true)
             {
-                if(contara>0)
+                if(Dispon>0)
                 {
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::R)
                     {
@@ -720,6 +673,7 @@ void WithMovimentsEasy::events()
                     }
             }else
             {
+                update();
                 lost();
             }
         }

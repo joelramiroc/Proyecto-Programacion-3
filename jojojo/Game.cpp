@@ -5,13 +5,13 @@ using namespace std;
 Game::Game(Window& window) : window_(window)
 {
     string nombreArchivo;
-    nombreArchivo="Estadisticas_Del_Juego";
+    nombreArchivo="Estadisticas";
     ofstream archivo(nombreArchivo);
 }
 
 int Game::inicializar()
 {
-    if(!letra.loadFromFile("fonts/Wedgie Regular.ttf")){
+    if(!letra.loadFromFile("fonts/Monster AG.ttf")){
     return 1;
     }
     miTexto.setFont(letra);
@@ -472,34 +472,47 @@ void Game::eventos()
 void Game::update()
 {
     HerenciaPadre* playing=NULL;
-
-    string tipo= "WithMovimentsEasy";
-    if(tipo=="libre")
+    string tipo= "WithTimeEasy";
+    string nivel="";
+    string tipoOfGame="";
+    if(tipo=="Libre")
     {
         playing = new Libre(drawables,cube,window_);
     }else if(tipo=="WithTimeEasy")
     {
-        playing= new WithTimeEasy(drawables);
+        nivel="Facil";
+        tipoOfGame="Con tiempo";
+        playing= new WithTime(drawables,cube,window_,randomName(),tipoOfGame,nivel);
     }
     else if(tipo=="WithTimeNormal")
     {
-        playing= new WithTimeNormal(drawables);
+        nivel="Normal";
+        tipoOfGame="Con tiempo";
+        playing= new WithTime(drawables,cube,window_,randomName(),tipoOfGame,nivel);
     }
     else if(tipo=="WithTimeHard")
     {
-        playing= new WithTimeHard(drawables);
+        nivel="Dificil";
+        tipoOfGame="Con tiempo";
+        playing= new WithTime(drawables,cube,window_,randomName(),tipoOfGame,nivel);
     }
     else if(tipo=="WithMovimentsEasy")
     {
-        playing= new WithMovimentsEasy(drawables,cube,window_,randomName());
+        nivel="Facil";
+        tipoOfGame="Con movimientos";
+        playing= new WithMoviments(drawables,cube,window_,randomName(),tipoOfGame,nivel);
     }
     else if(tipo=="WithMovimentsNormal")
     {
-        playing= new WithMovimentsNormal(drawables);
+        nivel="Normal";
+        tipoOfGame="Con movimientos";
+        playing= new WithMoviments(drawables,cube,window_,randomName(),tipoOfGame,nivel);
     }
     else if(tipo=="WithMovimentsHard")
     {
-        playing= new WithMovimentsHard(drawables);
+        nivel="Dificil";
+        tipoOfGame="Con movimientos";
+        playing= new WithMoviments(drawables,cube,window_,randomName(),tipoOfGame,nivel);
     }else
     {
         return;

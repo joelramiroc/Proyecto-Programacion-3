@@ -17,7 +17,7 @@ public:
     InfoPlayer* infoPLayer;
     sf::Event miEvento;
     int azul,verde,amarillo,blanco,rojo,naranja,noExiste;
-    int ganados,perdidos,score;
+    int ganados,perdidos,Dispon,contara;
     bool l,ll,r,rr,d,dd,u,uu,s,ss,m,mm,b,bb,f,ff,t,tt,repetir,endGame;
     string typeGame,nivelDificultad,nombreJugador;
     virtual void comparations()=0;
@@ -37,6 +37,8 @@ public:
     sf::Text mostrarTipo,mostrarNivel,mostrarRestante,mostrarSalir,mostrarGa,MostrarPe,mostrarNom,mostrarPlayAgain;
     vector<sf::Sprite*> gifWin;
     vector<sf::Texture*> imgWin;
+    vector<sf::Sprite*> gifLost;
+    vector<sf::Texture*> imgLost;
     string cantidadRestante;
 };
 

@@ -3,7 +3,7 @@ Libre::Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_):
 {
     this->cube=cube;
     this->temp=&drawables;
-    this->score=0;
+    this->Dispon=0;
     this->typeGame="Libre";
 }
 
