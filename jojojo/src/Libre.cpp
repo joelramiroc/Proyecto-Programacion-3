@@ -137,8 +137,7 @@ void Libre::playAgain()
     endGame=false;
     Dispon=0;
     contara=0;
-    string disponibles="Realizados: " + to_string(Dispon);
-    mostrarRestante.setString(disponibles);
+    cantidadRestante = "Realizados: " + to_string(Dispon);
     ((*temp)["restante"])=&mostrarRestante;
     (*temp).erase("win");
     (*temp).erase("lost");
