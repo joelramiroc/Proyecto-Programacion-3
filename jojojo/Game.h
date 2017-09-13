@@ -61,9 +61,10 @@ private:
     void render();
     void cleared();
     string randomName();
+    string tipo;
 public:
 
-    Game(Window& window);
+    Game(Window& window,string tipo);
     void run();
 };
 

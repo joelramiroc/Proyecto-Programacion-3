@@ -55,11 +55,16 @@ void Window::agregar(InfoPlayer *datosPlayer) {
     int ganados=0,perdidos=0,totalG=0,totalP=0;
 
     ifstream in(nombre_archivo.c_str());
-    in.seekg(0 * TAMANO_REGISTRO);
+    in.seekg(0 ,ios::end);
+    int t= in.tellg();
     int posicion=0;
     int stellg=0;
     bool cont=true;
-    while(!in.eof() && cont) {
+    if(t==0)
+        cont=false;
+    in.seekg(0 ,ios::beg);
+
+    while(in.tellg()<t && cont) {
         stellg=in.tellg();
         in.read(nombre, 10);
         string ev = nombre;
@@ -68,13 +73,14 @@ void Window::agregar(InfoPlayer *datosPlayer) {
             in.read((char *) &perdidos, 4);
             cont = false;
         }else {
-            int t, t2;
-            in.read((char *) &t, 4);
-            in.read((char *) &t2, 4);
+            int x, x2;
+            in.read((char *) &x, 4);
+            in.read((char *) &x2, 4);
+            stellg=in.tellg();
         }
-
     }
-    posicion=stellg/18;
+    in.close();
+
     ofstream out(nombre_archivo.c_str(),ios::in|ios::out);
     if(!out.is_open())
     {
@@ -82,7 +88,7 @@ void Window::agregar(InfoPlayer *datosPlayer) {
     }
     totalG=ganados+datosPlayer->ganados;
     totalP=perdidos+datosPlayer->perdidos;
-    out.seekp(posicion * TAMANO_REGISTRO);
+    out.seekp(stellg);
     out.write(datosPlayer->nombre.c_str(),10);
     out.write((char*)&totalG,4);
     out.write((char*)&totalP,4);

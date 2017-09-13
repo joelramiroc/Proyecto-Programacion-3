@@ -2,11 +2,12 @@
 #include<iostream>
 using namespace std;
 
-Game::Game(Window& window) : window_(window)
+Game::Game(Window& window,string tipo) : window_(window)
 {
     string nombreArchivo;
     nombreArchivo="Estadisticas";
-    ofstream archivo(nombreArchivo);
+    //ofstream archivo(nombreArchivo);
+    this->tipo=tipo;
 }
 
 int Game::inicializar()
@@ -472,7 +473,6 @@ void Game::eventos()
 void Game::update()
 {
     HerenciaPadre* playing=NULL;
-    string tipo= "WithMovimentsHard";
     string nivel="";
     string tipoOfGame="";
     if(tipo=="Libre")
