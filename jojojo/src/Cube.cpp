@@ -11,33 +11,33 @@ Cube::Cube()
         amarillo =sf::Color::Yellow;
 
 
-        p1=new Vertice(blanco,negro,negro,verde,negro,naranja);
-        p3=new Vertice(blanco,negro,negro,verde,rojo,negro);
-        p7=new Vertice(blanco,negro,azul,negro,negro,naranja);
-        p9=new Vertice(blanco,negro,azul,negro,rojo,negro);
-        p18=new Vertice(negro,amarillo,negro,verde,negro,naranja);
-        p20=new Vertice(negro,amarillo,negro,verde,rojo,negro);
-        p24=new Vertice(negro,amarillo,azul,negro,negro,naranja);
-        p26=new Vertice(negro,amarillo,azul,negro,rojo,negro);
-        p2=new Arista(blanco,negro,negro,verde,negro,negro);
-        p4=new Arista(blanco,negro,negro,negro,negro,naranja);
-        p6=new Arista(blanco,negro,negro,negro,rojo,negro);
-        p8=new Arista(blanco,negro,azul,negro,negro,negro);
-        p10=new Arista(negro,negro,negro,verde,negro,naranja);
-        p12=new Arista(negro,negro,negro,verde,rojo,negro);
-        p14=new Arista(negro,negro,azul,negro,rojo,negro);
-        p16=new Arista(negro,negro,azul,negro,negro,naranja);
-        p19=new Arista(negro,amarillo,negro,verde,negro,negro);
-        p21=new Arista(negro,amarillo,negro,negro,negro,naranja);
-        p23=new Arista(negro,amarillo,negro,negro,rojo,negro);
-        p25=new Arista(negro,amarillo,azul,negro,negro,negro);
+        p1=new Piece(blanco,negro,negro,verde,negro,naranja);
+        p3=new Piece(blanco,negro,negro,verde,rojo,negro);
+        p7=new Piece(blanco,negro,azul,negro,negro,naranja);
+        p9=new Piece(blanco,negro,azul,negro,rojo,negro);
+        p18=new Piece(negro,amarillo,negro,verde,negro,naranja);
+        p20=new Piece(negro,amarillo,negro,verde,rojo,negro);
+        p24=new Piece(negro,amarillo,azul,negro,negro,naranja);
+        p26=new Piece(negro,amarillo,azul,negro,rojo,negro);
+        p2=new Piece(blanco,negro,negro,verde,negro,negro);
+        p4=new Piece(blanco,negro,negro,negro,negro,naranja);
+        p6=new Piece(blanco,negro,negro,negro,rojo,negro);
+        p8=new Piece(blanco,negro,azul,negro,negro,negro);
+        p10=new Piece(negro,negro,negro,verde,negro,naranja);
+        p12=new Piece(negro,negro,negro,verde,rojo,negro);
+        p14=new Piece(negro,negro,azul,negro,rojo,negro);
+        p16=new Piece(negro,negro,azul,negro,negro,naranja);
+        p19=new Piece(negro,amarillo,negro,verde,negro,negro);
+        p21=new Piece(negro,amarillo,negro,negro,negro,naranja);
+        p23=new Piece(negro,amarillo,negro,negro,rojo,negro);
+        p25=new Piece(negro,amarillo,azul,negro,negro,negro);
 
-        p5=new Centro(blanco,negro,negro,negro,negro,negro);
-        p11=new Centro(negro,negro,negro,verde,negro,negro);
-        p13=new Centro(negro,negro,negro,negro,rojo,negro);
-        p15=new Centro(negro,negro,azul,negro,negro,negro);
-        p17=new Centro(negro,negro,negro,negro,negro,naranja);
-        p22=new Centro(negro,amarillo,negro,negro,negro,negro);
+        p5=new Piece(blanco,negro,negro,negro,negro,negro);
+        p11=new Piece(negro,negro,negro,verde,negro,negro);
+        p13=new Piece(negro,negro,negro,negro,rojo,negro);
+        p15=new Piece(negro,negro,azul,negro,negro,negro);
+        p17=new Piece(negro,negro,negro,negro,negro,naranja);
+        p22=new Piece(negro,amarillo,negro,negro,negro,negro);
 
 
     this->p1->arriba=&p7;

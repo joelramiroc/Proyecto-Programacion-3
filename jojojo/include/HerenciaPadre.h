@@ -6,7 +6,6 @@
 #include<vector>
 #include<stdlib.h>
 #include<time.h>
-
 #include"Window.h"
 #include"InfoPlayer.h"
 using namespace std;

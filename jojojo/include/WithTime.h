@@ -21,6 +21,7 @@ class WithTime: public HerenciaPadre{
         void scramble();
         void win();
         void playAgain();
+        void tiempoT();
         Cube* cube;
         Window window_;
         sf::Clock timeP;

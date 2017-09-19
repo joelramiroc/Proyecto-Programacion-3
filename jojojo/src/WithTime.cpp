@@ -22,7 +22,7 @@ WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& win
     mostrarTipo.setString(tipeOfGame);
     ((*temp)["tipo"])=&mostrarTipo;
     mostrarRestante.setString(cantidadRestante);
-    cantidadRestante = "Transcurrido: " + to_string(Dispon);
+    tiempoT();
     ((*temp)["restante"])=&mostrarRestante;
     ((*temp)["salir"])=&mostrarSalir;
     ((*temp)["playAgain"])=&mostrarPlayAgain;
@@ -35,7 +35,6 @@ WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& win
 
 void WithTime::scramble()
 {
-
     srand(time(NULL));
     int num=1+rand()%(7-1);
     int contara=21;
@@ -192,9 +191,6 @@ void WithTime::playAgain()
 {
     timeP.restart();
     endGame=false;
-    string disponibles="Disponibles: " + to_string(timeP.getElapsedTime().asSeconds());
-    mostrarRestante.setString(disponibles);
-    ((*temp)["restante"])=&mostrarRestante;
     (*temp).erase("win");
     (*temp).erase("lost");
     update();
@@ -612,6 +608,19 @@ void WithTime::guardar(string nombre, int ganados, int perdidos)
 
 
 };
+void WithTime::tiempoT()
+{
+    if(!endGame)
+    {
+        double actual=timeP.getElapsedTime().asSeconds();
+        int t=actual;
+        int sT=timeP.getElapsedTime().asMilliseconds();
+        int minutos= t/60;
+        int segundos = t%60;
+        int milisegundos= sT%60%60;
+        cantidadRestante = "Transcurrido: " + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos);
+    }
+};
 
 void WithTime::info()
 {
@@ -621,7 +630,7 @@ void WithTime::info()
         {
             lost();
         }else{
-            cantidadRestante = "Transcurrido: " + to_string(timeP.getElapsedTime().asSeconds());
+            tiempoT();
         }
     }
 };

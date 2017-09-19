@@ -67,7 +67,7 @@ HerenciaPadre::HerenciaPadre()
     mostrarNivel.setFont(nivel);
     mostrarNivel.setCharacterSize(25);
     mostrarNivel.setColor(sf::Color::White);
-    mostrarNivel.setPosition(sf::Vector2f(1120.f,10.f));
+    mostrarNivel.setPosition(sf::Vector2f(1100.f,10.f));
 
     if(!tipo.loadFromFile("fonts/fast99.ttf")){
             return;

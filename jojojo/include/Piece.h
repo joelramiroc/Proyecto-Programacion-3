@@ -19,12 +19,15 @@ class Piece
         Piece** abajo;
         Piece** izquierda;
         Piece** derecha;
-        virtual void MovementArriba()=0;
-        virtual void MovementAbajo()=0;
-        virtual void MovementIzquierda()=0;
-        virtual void MovementDerecha()=0;
-        virtual void MovementGiroDerecha()=0;
-        virtual void MovementGiroIzquierda()=0;
+        void MovementArriba();
+        void MovementAbajo();
+        void MovementIzquierda();
+        void MovementDerecha();
+        void MovementGiroDerecha();
+        void MovementGiroIzquierda();
+        Piece(sf::Color &arriba,sf::Color &abajo,sf::Color &atras,sf::Color &frente,sf::Color &derecha,sf::Color &izquierda);
+
+
 
 };
 #endif // PIECE_H
