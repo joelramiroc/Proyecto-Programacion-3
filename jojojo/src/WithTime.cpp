@@ -6,13 +6,13 @@ WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& win
 
     if(level=="Facil")
     {
-        this->Dispon=360;
+        this->Dispon=540;
     }else if(level=="Normal")
     {
-        this->Dispon=300;
+        this->Dispon=480;
     }else
     {
-        this->Dispon=120;
+        this->Dispon=180;
     }
     totalDisp=Dispon;
 
