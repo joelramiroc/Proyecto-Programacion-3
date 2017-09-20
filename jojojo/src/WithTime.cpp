@@ -2,16 +2,19 @@
 
 WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,string nombrePlayer,string tipeOfGame,string level):window_(window_)
 {
+        backroundP["backck"]=&backck;
+
     if(level=="Facil")
     {
-        this->Dispon=600;
+        this->Dispon=360;
     }else if(level=="Normal")
     {
         this->Dispon=300;
     }else
     {
-        this->Dispon=60;
+        this->Dispon=120;
     }
+    totalDisp=Dispon;
     this->nombreJugador=nombrePlayer;
     this->cube=cube;
     this->temp=&drawables;
@@ -32,6 +35,7 @@ WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& win
     update();
     guardar(nombreJugador,0,0);
 }
+
 
 void WithTime::scramble()
 {
@@ -142,13 +146,18 @@ void WithTime::win()
 
 void WithTime::lost()
 {
+    int  minutos=Dispon/60;
+       int  segundos=Dispon%60;
+        int milisegundos=0;
+        cantidadRestante = "Transcurrido: " + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos)+"/"+to_string(totalDisp);
+        act();
     if(!endGame)
     {
         guardar(nombreJugador,0,1);
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
-
-        while(elapsed1.asSeconds()<2)
+        reproducirFin.play();
+        while(elapsed1.asSeconds()<3)
         {
             elapsed1 = clock.getElapsedTime();
              if(elapsed1.asMilliseconds()<250)
@@ -178,6 +187,12 @@ void WithTime::lost()
             }else if(elapsed1.asMilliseconds()<1250)
             {
                 ((*temp)["win"])=(gifLost[4]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1500)
+            {
+                ((*temp)["win"])=(gifLost[5]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
@@ -580,10 +595,8 @@ void WithTime::update()
         act();
         l=false;
     }
-
-
-
     window_.cleared();
+    window_.draw(backroundP);
     window_.draw(*temp);
     window_.display();
 
@@ -610,15 +623,15 @@ void WithTime::guardar(string nombre, int ganados, int perdidos)
 };
 void WithTime::tiempoT()
 {
-    if(!endGame)
-    {
         double actual=timeP.getElapsedTime().asSeconds();
         int t=actual;
         int sT=timeP.getElapsedTime().asMilliseconds();
         int minutos= t/60;
         int segundos = t%60;
         int milisegundos= sT%60%60;
-        cantidadRestante = "Transcurrido: " + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos);
+    if(!endGame)
+    {
+        cantidadRestante = "Transcurrido: " + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos)+"/"+to_string(totalDisp);
     }
 };
 
@@ -653,46 +666,55 @@ void WithTime::events()
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::R)
                     {
                         info();
+                        reproducirMovv.play();
                         r=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::L)
                     {
                         info();
+                        reproducirMovv.play();
                         l=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::F)
                     {
                         info();
+                        reproducirMovv.play();
                         f=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::B)
                     {
                         info();
+                        reproducirMovv.play();
                         b=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::U)
                     {
                         info();
+                        reproducirMovv.play();
                         u=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::D)
                     {
                         info();
+                        reproducirMovv.play();
                         d=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::S)
                     {
                         info();
+                        reproducirMovv.play();
                         s=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::T)
                     {
                         info();
+                        reproducirMovv.play();
                         t=true;
                     }
                 if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::M)
                     {
                         info();
+                        reproducirMovv.play();
                         m=true;
                     }
             }else
@@ -721,4 +743,5 @@ void WithTime::loop()
         update();
         comparations();
     }
+    musica.stop();
 };

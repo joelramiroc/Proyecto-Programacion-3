@@ -4,12 +4,8 @@ using namespace std;
 
 Game::Game(Window& window,string tipo) : window_(window)
 {
-    string nombreArchivo;
-    nombreArchivo="Estadisticas";
-    //ofstream archivo(nombreArchivo);
     this->tipo=tipo;
 }
-
 int Game::inicializar()
 {
     if(!letra.loadFromFile("fonts/Monster AG.ttf")){

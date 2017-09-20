@@ -14,6 +14,7 @@ class WithTime: public HerenciaPadre{
         void cleared();
         void info();
         void loop();
+        void load();
         void update();
         void events();
         void act();
@@ -27,6 +28,7 @@ class WithTime: public HerenciaPadre{
         sf::Clock timeP;
         sf::Time calcTime;
         map<string,sf::Drawable*>* temp;
+        map<string,sf::Drawable*> backroundP;
 
 };
 

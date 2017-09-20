@@ -54,7 +54,6 @@ private:
 
     sf::Texture prin;
     sf::Sprite prinn;
-
     int inicializar();
     void eventos();
     void update();

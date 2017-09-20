@@ -19,6 +19,7 @@
 					<Add library="C:/SFML-2.4.2/lib/libsfml-graphics-d.a" />
 					<Add library="C:/SFML-2.4.2/lib/libsfml-window-d.a" />
 					<Add library="C:/SFML-2.4.2/lib/libsfml-system-d.a" />
+					<Add library="C:/SFML-2.4.2/lib/libsfml-audio-d.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -35,6 +36,7 @@
 					<Add library="C:/SFML-2.4.2/lib/libsfml-graphics-d.a" />
 					<Add library="C:/SFML-2.4.2/lib/libsfml-window-d.a" />
 					<Add library="C:/SFML-2.4.2/lib/libsfml-system-d.a" />
+					<Add library="C:/SFML-2.4.2/lib/libsfml-audio-d.a" />
 				</Linker>
 			</Target>
 		</Build>

@@ -397,7 +397,7 @@
 1502331794 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\test.cpp
 	<SFML/Graphics.hpp>
 
-1505782517 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
+1505871123 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\main.cpp
 	<SFML/Graphics.hpp>
 	"Game.h"
 	"Window.h"
@@ -405,11 +405,11 @@
 	<memory>
 	<iostream>
 
-1505223934 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1505916439 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
-1505223943 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
+1505916433 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.h
 	<SFML/Graphics.hpp>
 	"Window.h"
 	<vector>
@@ -430,10 +430,10 @@
 	<map>
 	<iostream>
 
-1505502998 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
+1505930375 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
-1505504105 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
+1505930288 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
 	<iostream>
 	<fstream>
 	<SFML/Graphics.hpp>
@@ -442,11 +442,12 @@
 	<time.h>
 	"Window.h"
 	"InfoPlayer.h"
+	<SFML/Audio.hpp>
 
-1505503254 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
+1505922848 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
 	"WithTime.h"
 
-1505453076 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtime.h
+1505886393 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtime.h
 	"HerenciaPadre.h"
 	<iostream>
 	"Cube.h"
@@ -469,10 +470,10 @@
 1504496702 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimenormal.h
 	"WithTime.h"
 
-1505135184 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmoviments.cpp
+1505928581 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmoviments.cpp
 	"WithMoviments.h"
 
-1504790605 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmoviments.h
+1505886251 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmoviments.h
 	"HerenciaPadre.h"
 	<iostream>
 	"Cube.h"
@@ -506,10 +507,10 @@
 	"HerenciaPadre.h"
 	"Cube.h"
 
-1505311895 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+1505886496 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
 	"Libre.h"
 
-1504790876 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
+1505886398 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
 	"HerenciaPadre.h"
 	<vector>
 	<SFML/Graphics.hpp>
@@ -525,7 +526,7 @@
 	"InfoPlayer.h"
 	<string.h>
 
-1505137785 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
+1505880464 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\window.cpp
 	"Window.h"
 
 1503520521 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\spriteobjet.h
@@ -583,19 +584,122 @@
 1504928264 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\infoplayer.cpp
 	"InfoPlayer.h"
 
-1505782993 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\menuprincipal.cpp
+1505924616 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\menuprincipal.cpp
 	"MenuPrincipal.h"
 
-1505774660 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\menuprincipal.h
+1505916331 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\menuprincipal.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"../Game.h"
 	"Instructions.h"
 
-1505532315 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\instructions.h
+1505879863 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\instructions.h
 	<SFML/Graphics.hpp>
 	"Window.h"
 
-1505772506 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\instructions.cpp
+1505879885 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\instructions.cpp
 	"Instructions.h"
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio.hpp
+	<SFML/System.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1501708487 c:\sfml-2.4.2\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Mutex.hpp>
+	<cstdlib>
+
+1501708487 c:\sfml-2.4.2\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Vector3.hpp>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\alresource.hpp
+	<SFML/Audio/Export.hpp>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<string>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+	<set>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+
+1501708487 c:\sfml-2.4.2\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<vector>
+	<string>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+	<vector>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\soundfilefactory.inl
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1501708486 c:\sfml-2.4.2\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
 

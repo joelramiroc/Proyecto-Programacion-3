@@ -15,6 +15,7 @@ class WithMoviments:public HerenciaPadre
         void cleared();
         void info();
         void loop();
+        void load();
         void update();
         void events();
         void act();
@@ -24,7 +25,10 @@ class WithMoviments:public HerenciaPadre
         void playAgain();
         Cube* cube;
         Window window_;
+
         map<string,sf::Drawable*>* temp;
+        map<string,sf::Drawable*> backroundP;
+
 };
 
 #endif // WITHMOVIMENTS_H

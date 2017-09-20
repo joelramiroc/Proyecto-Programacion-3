@@ -2,6 +2,9 @@
 
 WithMoviments::WithMoviments(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,string nombrePlayer,string tipeOfGame,string level):window_(window_)
 {
+
+    backroundP["backck"]=&backck;
+
     if(level=="Facil")
     {
         this->Dispon=1000;
@@ -10,8 +13,9 @@ WithMoviments::WithMoviments(map<string,sf::Drawable*>& drawables, Cube* &cube,W
         this->Dispon=500;
     }else
     {
-        this->Dispon=2;
+        this->Dispon=250;
     }
+    totalDisp=Dispon;
     this->nombreJugador=nombrePlayer;
     this->cube=cube;
     this->temp=&drawables;
@@ -23,7 +27,7 @@ WithMoviments::WithMoviments(map<string,sf::Drawable*>& drawables, Cube* &cube,W
     mostrarTipo.setString(tipeOfGame);
     ((*temp)["tipo"])=&mostrarTipo;
     mostrarRestante.setString(cantidadRestante);
-    cantidadRestante = "Disponibles: " + to_string(Dispon);
+    cantidadRestante = "Disponibles: " + to_string(Dispon) + "/"+to_string(totalDisp);
     ((*temp)["restante"])=&mostrarRestante;
     ((*temp)["salir"])=&mostrarSalir;
     ((*temp)["playAgain"])=&mostrarPlayAgain;
@@ -81,6 +85,8 @@ void WithMoviments::win()
         guardar(nombreJugador,1,0);
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
+        musica.stop();
+        reproducirWin.play();
 
         while(elapsed1.asSeconds()<2)
         {
@@ -123,13 +129,13 @@ void WithMoviments::win()
                 window_.display();
             }else if(elapsed1.asMilliseconds()<1750)
             {
-                ((*temp)["win"])=(gifWin[2]);
+                ((*temp)["win"])=(gifWin[6]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
             }else if(elapsed1.asMilliseconds()<2000)
             {
-                ((*temp)["win"])=(gifWin[1]);
+                ((*temp)["win"])=(gifWin[7]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
@@ -148,8 +154,9 @@ void WithMoviments::lost()
         guardar(nombreJugador,0,1);
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
-
-        while(elapsed1.asSeconds()<2)
+        musica.stop();
+        reproducirLost.play();
+        while(elapsed1.asSeconds()<3)
         {
             elapsed1 = clock.getElapsedTime();
              if(elapsed1.asMilliseconds()<250)
@@ -182,6 +189,12 @@ void WithMoviments::lost()
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
+            }else if(elapsed1.asMilliseconds()<1500)
+            {
+                ((*temp)["win"])=(gifLost[5]);
+                window_.cleared();
+                window_.draw(*temp);
+                window_.display();
             }
         }
         endGame=true;
@@ -190,9 +203,10 @@ void WithMoviments::lost()
 
 void WithMoviments::playAgain()
 {
+    musica.play();
     endGame=false;
     Dispon=contara;
-    string disponibles="Disponibles: " + to_string(Dispon);
+    string disponibles="Disponibles: " + to_string(Dispon) + "/"+to_string(totalDisp);
     mostrarRestante.setString(disponibles);
     ((*temp)["restante"])=&mostrarRestante;
     (*temp).erase("win");
@@ -588,6 +602,7 @@ void WithMoviments::update()
 
 
     window_.cleared();
+    window_.draw(backroundP);
     window_.draw(*temp);
     window_.display();
 
@@ -615,8 +630,9 @@ void WithMoviments::guardar(string nombre, int ganados, int perdidos)
 
 void WithMoviments::info()
 {
+    reproducirMovv.play();
     Dispon--;
-    cantidadRestante = "Disponibles: " + to_string(Dispon);
+    cantidadRestante = "Disponibles: " + to_string(Dispon) + "/"+to_string(totalDisp);
 };
 
 void WithMoviments::events()
@@ -702,4 +718,5 @@ void WithMoviments::loop()
         update();
         comparations();
     }
+    musica.stop();
 };

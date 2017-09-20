@@ -2,13 +2,14 @@
 
 Libre::Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,string nombrePlayer):window_(window_)
 {
+    backroundP["backck"]=&backck;
+
     this->Dispon=0;
     this->nombreJugador=nombrePlayer;
     this->cube=cube;
     this->temp=&drawables;
     this->contara=Dispon;
     this->typeGame="LibreNormal";
-
     mostrarNivel.setString("Libre");
     ((*temp)["nivel"])=&mostrarNivel;
     mostrarTipo.setString("Sin Limites");
@@ -23,6 +24,7 @@ Libre::Libre(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& window_,s
     ((*temp)["perdidosP"])=&MostrarPe;
     update();
     guardar(nombreJugador,0,0);
+
 }
 
 void Libre::scramble()
@@ -532,6 +534,7 @@ void Libre::update()
 
 
     window_.cleared();
+    window_.draw(backroundP);
     window_.draw(*temp);
     window_.display();
 
@@ -559,6 +562,7 @@ void Libre::guardar(string nombre, int ganados, int perdidos)
 
 void Libre::info()
 {
+    reproducirMovv.play();
     Dispon++;
     cantidadRestante = "Realizados: " + to_string(Dispon);
 };
@@ -630,6 +634,7 @@ void Libre::cleared()
     window_.close();
 }
 
+
 void Libre::loop()
 {
     scramble();
@@ -639,4 +644,5 @@ void Libre::loop()
         update();
         comparations();
     }
+    musica.stop();
 };

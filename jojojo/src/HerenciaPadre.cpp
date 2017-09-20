@@ -3,6 +3,29 @@
 
 HerenciaPadre::HerenciaPadre()
 {
+    if(!backShow.loadFromFile("img/backrounds.png"))
+        return;
+    backck.setTexture(backShow);
+
+    if (!sonidoMovimiento.loadFromFile("audio/giro.ogg"))
+		return;
+	reproducirMovv.setBuffer(sonidoMovimiento);
+
+	if (!sonidoFin.loadFromFile("audio/fin.ogg"))
+		return;
+	reproducirFin.setBuffer(sonidoFin);
+
+	if (!sonidoWin.loadFromFile("audio/winner.ogg"))
+		return;
+	reproducirWin.setBuffer(sonidoWin);
+
+	if (!sonidoLost.loadFromFile("audio/lost.ogg"))
+		return;
+	reproducirLost.setBuffer(sonidoLost);
+    musica.openFromFile("audio/prueba.ogg");
+   	musica.setLoop(true);
+	musica.play();
+
     this->repetir=true;
     this->l=false;
     this->ll=false;
@@ -36,28 +59,32 @@ HerenciaPadre::HerenciaPadre()
     this->rojo=5;
     this->naranja=6;
     this->noExiste=0;
-    for(int i=0;i<6;i++)
+    for(int i=0;i<8;i++)
     {
         string n= to_string(i+1);
         string wins="img/winded/"+n+".png";
-        string losts="img/losted/"+n+".png";
+
 
         imgWin.push_back(new sf::Texture);
         gifWin.push_back(new sf::Sprite);
-        imgLost.push_back(new sf::Texture);
-        gifLost.push_back(new sf::Sprite);
 
          if(!(imgWin[i])->loadFromFile(wins)){
+                		return;
                 };
         (gifWin[i])->setTexture(*(imgWin[i]));
-        (gifWin[i])->setPosition(sf::Vector2f(375.f,200.f));
+        (gifWin[i])->setPosition(sf::Vector2f(100.f,90.f));
 
-        if(i<5)
+        if(i<6)
         {
-         if(!(imgLost[i])->loadFromFile(losts)){
-                };
-        (gifLost[i])->setTexture(*(imgLost[i]));
-        (gifLost[i])->setPosition(sf::Vector2f(375.f,200.f));
+            string losts="img/losted/"+n+".png";
+            imgLost.push_back(new sf::Texture);
+            gifLost.push_back(new sf::Sprite);
+
+             if(!(imgLost[i])->loadFromFile(losts)){
+                            return;
+                    };
+            (gifLost[i])->setTexture(*(imgLost[i]));
+            (gifLost[i])->setPosition(sf::Vector2f(475.f,120.f));
         }
     }
 
@@ -84,7 +111,7 @@ HerenciaPadre::HerenciaPadre()
     mostrarRestante.setFont(tipo);
     mostrarRestante.setCharacterSize(25);
     mostrarRestante.setColor(sf::Color::White);
-    mostrarRestante.setPosition(sf::Vector2f(950.f,70.f));
+    mostrarRestante.setPosition(sf::Vector2f(890.f,70.f));
 
 
 
@@ -132,6 +159,7 @@ HerenciaPadre::HerenciaPadre()
     MostrarPe.setString("Perdidos:");
     MostrarPe.setColor(sf::Color::White);
     MostrarPe.setPosition(sf::Vector2f(950.f,160.f));
-
-
 }
+
+
+

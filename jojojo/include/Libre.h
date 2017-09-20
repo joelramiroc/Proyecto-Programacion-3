@@ -16,6 +16,7 @@ class Libre:public HerenciaPadre
         void cleared();
         void info();
         void loop();
+        void load();
         void update();
         void events();
         void act();
@@ -26,6 +27,8 @@ class Libre:public HerenciaPadre
         Cube* cube;
         Window window_;
         map<string,sf::Drawable*>* temp;
+        map<string,sf::Drawable*> backroundP;
+
 };
 
 #endif // LIBRE_H
