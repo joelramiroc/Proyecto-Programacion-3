@@ -22,12 +22,15 @@ WithMoviments::WithMoviments(map<string,sf::Drawable*>& drawables, Cube* &cube,W
     this->contara=Dispon;
     this->typeGame="WithMovimentsNormal";
 
+    mostrarTotal.setString("Total:" + to_string(Dispon));
+    ((*temp)["Total"])=&mostrarTotal;
+
     mostrarNivel.setString(level);
     ((*temp)["nivel"])=&mostrarNivel;
     mostrarTipo.setString(tipeOfGame);
     ((*temp)["tipo"])=&mostrarTipo;
     mostrarRestante.setString(cantidadRestante);
-    cantidadRestante = "Disponibles: " + to_string(Dispon) + "/"+to_string(totalDisp);
+    cantidadRestante = "Disponibles: " + to_string(Dispon);
     ((*temp)["restante"])=&mostrarRestante;
     ((*temp)["salir"])=&mostrarSalir;
     ((*temp)["playAgain"])=&mostrarPlayAgain;
@@ -206,7 +209,7 @@ void WithMoviments::playAgain()
     musica.play();
     endGame=false;
     Dispon=contara;
-    string disponibles="Disponibles: " + to_string(Dispon) + "/"+to_string(totalDisp);
+    string disponibles="Disponibles: " + to_string(Dispon);
     mostrarRestante.setString(disponibles);
     ((*temp)["restante"])=&mostrarRestante;
     (*temp).erase("win");
@@ -632,7 +635,7 @@ void WithMoviments::info()
 {
     reproducirMovv.play();
     Dispon--;
-    cantidadRestante = "Disponibles: " + to_string(Dispon) + "/"+to_string(totalDisp);
+    cantidadRestante = "Disponibles: " + to_string(Dispon);
 };
 
 void WithMoviments::events()

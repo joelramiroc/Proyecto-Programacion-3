@@ -40,8 +40,8 @@ public:
         virtual void scramble()=0;
         vector<sf::Sprite*> sprites;
         HerenciaPadre();
-        sf::Font tipo,nivel,restante,salir,nombreP,ganadosP,perdidosP,playA;
-        sf::Text mostrarTipo,mostrarNivel,mostrarRestante,mostrarSalir,mostrarGa,MostrarPe,mostrarNom,mostrarPlayAgain;
+        sf::Font tipo,nivel,restante,salir,nombreP,ganadosP,perdidosP,playA,totalShow;
+        sf::Text mostrarTipo,mostrarNivel,mostrarRestante,mostrarSalir,mostrarGa,MostrarPe,mostrarNom,mostrarPlayAgain,mostrarTotal;
         vector<sf::Sprite*> gifWin;
         vector<sf::Texture*> imgWin;
         vector<sf::Sprite*> gifLost;

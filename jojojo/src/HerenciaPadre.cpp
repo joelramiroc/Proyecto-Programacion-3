@@ -113,8 +113,16 @@ HerenciaPadre::HerenciaPadre()
     mostrarRestante.setFont(tipo);
     mostrarRestante.setCharacterSize(25);
     mostrarRestante.setColor(sf::Color::White);
-    mostrarRestante.setPosition(sf::Vector2f(890.f,70.f));
+    mostrarRestante.setPosition(sf::Vector2f(950.f,70.f));
 
+    if(!totalShow.loadFromFile("fonts/fast99.ttf")){
+            return;
+    }
+
+    mostrarTotal.setFont(tipo);
+    mostrarTotal.setCharacterSize(25);
+    mostrarTotal.setColor(sf::Color::White);
+    mostrarTotal.setPosition(sf::Vector2f(950.f,95.f));
 
 
      if(!salir.loadFromFile("fonts/fast99.ttf")){
