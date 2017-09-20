@@ -626,8 +626,6 @@ void WithTime::guardar(string nombre, int ganados, int perdidos)
     (*(sf::Text*)((*temp)["nombreP"])).setString(nombreN);
     (*(sf::Text*)((*temp)["ganadosP"])).setString(ganadosN);
     (*(sf::Text*)((*temp)["perdidosP"])).setString(perdidosN);
-
-
 };
 void WithTime::tiempoT()
 {
