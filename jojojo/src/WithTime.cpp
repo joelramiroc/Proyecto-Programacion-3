@@ -22,7 +22,7 @@ WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& win
     this->cube=cube;
     this->temp=&drawables;
     this->contara=Dispon;
-
+    mostrarNivel.setPosition(sf::Vector2f(950.f,10.f));
     mostrarNivel.setString(level);
     ((*temp)["nivel"])=&mostrarNivel;
     mostrarTotal.setString("Total: 0" + to_string(Dispon/60)+":0"+to_string(Dispon%60)+":00");
@@ -155,7 +155,7 @@ void WithTime::lost()
     int  minutos=Dispon/60;
        int  segundos=Dispon%60;
         int milisegundos=0;
-        cantidadRestante = "Transcurrido: " + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos);
+        cantidadRestante = "Transcurrido:" + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos);
         act();
     if(!endGame)
     {
@@ -639,7 +639,7 @@ void WithTime::tiempoT()
         int milisegundos= sT%60%60;
     if(!endGame)
     {
-        cantidadRestante = "Transcurrido: " + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos);
+        cantidadRestante = "Transcurrido:" + to_string(minutos) + ":"+ to_string(segundos) + ":"+ to_string(milisegundos);
     }
 };
 
@@ -660,6 +660,11 @@ void WithTime::events()
 {
     while(window_.pollEvent(miEvento))
     {
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::I)
+        {
+            instrucciones= new Instructions(window_);
+            instrucciones->loop();
+        }
         if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::LShift)
         {
             playAgain();

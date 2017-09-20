@@ -130,7 +130,7 @@ HerenciaPadre::HerenciaPadre()
     }
     mostrarSalir.setFont(salir);
     mostrarSalir.setCharacterSize(15);
-    mostrarSalir.setString("Presione Q para volver al menu");
+    mostrarSalir.setString("Presione Q para volver al menu.");
     mostrarSalir.setColor(sf::Color::White);
     mostrarSalir.setPosition(sf::Vector2f(910.f,610.f));
 
@@ -139,7 +139,7 @@ HerenciaPadre::HerenciaPadre()
     }
     mostrarPlayAgain.setFont(playA);
     mostrarPlayAgain.setCharacterSize(15);
-    mostrarPlayAgain.setString("Shitf: Jugar de nuevo");
+    mostrarPlayAgain.setString("Shitf: Jugar de nuevo.                                                                         I: Ver las instrucciones.");
     mostrarPlayAgain.setColor(sf::Color::White);
     mostrarPlayAgain.setPosition(sf::Vector2f(10.f,610.f));
 

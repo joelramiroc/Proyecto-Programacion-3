@@ -8,6 +8,7 @@
 #include<time.h>
 #include"Window.h"
 #include"InfoPlayer.h"
+#include"Instructions.h"
 #include <SFML/Audio.hpp>
 
 using namespace std;
@@ -15,6 +16,7 @@ using namespace std;
 class HerenciaPadre
 {
 public:
+        Instructions* instrucciones;
         int totalDisp=0;
         sf::Sprite backck;
         sf::Texture backShow;
@@ -46,8 +48,6 @@ public:
         vector<sf::Texture*> imgWin;
         vector<sf::Sprite*> gifLost;
         vector<sf::Texture*> imgLost;
-
-
         string cantidadRestante;
 };
 

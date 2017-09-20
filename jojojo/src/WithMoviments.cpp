@@ -642,6 +642,11 @@ void WithMoviments::events()
 {
     while(window_.pollEvent(miEvento))
     {
+        if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::I)
+        {
+            instrucciones= new Instructions(window_);
+            instrucciones->loop();
+        }
         if(miEvento.type==sf::Event::KeyPressed && miEvento.key.code==sf::Keyboard::LShift)
         {
             playAgain();
