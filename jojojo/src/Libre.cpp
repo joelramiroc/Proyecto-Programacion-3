@@ -67,6 +67,7 @@ void Libre::scramble()
     }
 };
 
+
 void Libre::win()
 {
     if(!endGame)
@@ -76,6 +77,7 @@ void Libre::win()
         sf::Time elapsed1 = clock.getElapsedTime();
         musica.stop();
         reproducirWin.play();
+
         while(elapsed1.asSeconds()<2)
         {
             elapsed1 = clock.getElapsedTime();
@@ -117,13 +119,13 @@ void Libre::win()
                 window_.display();
             }else if(elapsed1.asMilliseconds()<1750)
             {
-                ((*temp)["win"])=(gifWin[2]);
+                ((*temp)["win"])=(gifWin[6]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
             }else if(elapsed1.asMilliseconds()<2000)
             {
-                ((*temp)["win"])=(gifWin[1]);
+                ((*temp)["win"])=(gifWin[7]);
                 window_.cleared();
                 window_.draw(*temp);
                 window_.display();
