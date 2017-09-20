@@ -430,7 +430,7 @@
 	<map>
 	<iostream>
 
-1505941020 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
+1505943901 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
 1505940248 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
@@ -445,7 +445,7 @@
 	"Instructions.h"
 	<SFML/Audio.hpp>
 
-1505940377 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
+1505941537 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
 	"WithTime.h"
 
 1505886393 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtime.h
@@ -585,7 +585,7 @@
 1504928264 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\infoplayer.cpp
 	"InfoPlayer.h"
 
-1505932739 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\menuprincipal.cpp
+1505945685 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\menuprincipal.cpp
 	"MenuPrincipal.h"
 
 1505932424 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\menuprincipal.h
@@ -595,11 +595,11 @@
 	"Instructions.h"
 	<SFML/Audio.hpp>
 
-1505879863 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\instructions.h
+1505942796 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\instructions.h
 	<SFML/Graphics.hpp>
 	"Window.h"
 
-1505940453 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\instructions.cpp
+1505946051 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\instructions.cpp
 	"Instructions.h"
 
 1501708486 c:\sfml-2.4.2\include\sfml\audio.hpp

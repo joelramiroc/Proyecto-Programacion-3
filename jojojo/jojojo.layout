@@ -2,44 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="include\MenuPrincipal.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="308" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="src\Instructions.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="744" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\HerenciaPadre.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3348" topLine="108" />
-		</Cursor>
-	</File>
-	<File name="test.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="375" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Game.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="958" topLine="30" />
-		</Cursor>
-	</File>
-	<File name="include\Libre.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="792" topLine="15" />
-		</Cursor>
-	</File>
 	<File name="include\Piece.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="383" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="src\Piece.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="22" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Window.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -57,39 +22,73 @@
 			<Cursor1 position="837" topLine="14" />
 		</Cursor>
 	</File>
-	<File name="src\Libre.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3820" topLine="126" />
-		</Cursor>
-		<Folding>
-			<Collapse line="565" />
-			<Collapse line="572" />
-			<Collapse line="634" />
-		</Folding>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="350" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\Cube.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="src\Piece.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="939" topLine="32" />
+			<Cursor1 position="22" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Window.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="Game.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2915" topLine="82" />
+			<Cursor1 position="516" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\HerenciaPadre.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="src\WithMoviments.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1462" topLine="27" />
+			<Cursor1 position="7678" topLine="220" />
+		</Cursor>
+		<Folding>
+			<Collapse line="153" />
+		</Folding>
+	</File>
+	<File name="include\HerenciaPadre.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1781" topLine="30" />
 		</Cursor>
 	</File>
-	<File name="src\WithMoviments.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Instructions.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="597" topLine="12" />
+			<Cursor1 position="1195" topLine="37" />
+		</Cursor>
+	</File>
+	<File name="src\HerenciaPadre.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="224" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Libre.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="22731" topLine="147" />
+		</Cursor>
+		<Folding>
+			<Collapse line="138" />
+			<Collapse line="151" />
+			<Collapse line="248" />
+			<Collapse line="317" />
+			<Collapse line="545" />
+			<Collapse line="565" />
+		</Folding>
+	</File>
+	<File name="src\WithTime.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="24520" topLine="585" />
+		</Cursor>
+		<Folding>
+			<Collapse line="45" />
+		</Folding>
+	</File>
+	<File name="Game.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="958" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="test.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="375" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\InfoPlayer.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -97,44 +96,39 @@
 			<Cursor1 position="86" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\Instructions.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Libre.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="228" topLine="0" />
+			<Cursor1 position="792" topLine="15" />
 		</Cursor>
 	</File>
-	<File name="src\MenuPrincipal.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Instructions.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="198" topLine="0" />
+			<Cursor1 position="176" topLine="2" />
 		</Cursor>
-		<Folding>
-			<Collapse line="103" />
-			<Collapse line="185" />
-			<Collapse line="320" />
-		</Folding>
 	</File>
-	<File name="src\WithTime.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\MenuPrincipal.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="544" topLine="18" />
+			<Cursor1 position="3586" topLine="102" />
 		</Cursor>
-		<Folding>
-			<Collapse line="45" />
-			<Collapse line="85" />
-			<Collapse line="153" />
-			<Collapse line="212" />
-			<Collapse line="222" />
-			<Collapse line="319" />
-			<Collapse line="388" />
-			<Collapse line="613" />
-		</Folding>
 	</File>
-	<File name="Game.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+	<File name="include\MenuPrincipal.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="516" topLine="0" />
+			<Cursor1 position="1088" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="src\Window.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2915" topLine="82" />
 		</Cursor>
 	</File>
 	<File name="src\Cube.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3030" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Cube.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="939" topLine="32" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

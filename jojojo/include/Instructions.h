@@ -7,8 +7,11 @@
 class Instructions
 {
     public:
-        map<string,sf::Drawable*> drawables;
+        map<string,sf::Drawable*> loads;
+        vector<sf::Sprite*> gifLoad;
+        vector<sf::Texture*> imgLoad;
 
+        map<string,sf::Drawable*> drawables;
         map<string,sf::Drawable*> texttered;
         Window window_;
         sf::Event miEvento;
@@ -16,6 +19,8 @@ class Instructions
         sf::Texture instrucciones;
         sf::Text menu;
         sf::Font mostrarMenu;
+
+        void load();
         void loop();
         void events();
         bool isPlay=true;

@@ -6,7 +6,6 @@ Instructions::Instructions(Window& window): window_(window)
             cout<<"NO CARGO:"<<endl;
     };
     mostrarInstrucciones.setTexture(instrucciones);
-    mostrarInstrucciones.setPosition(sf::Vector2f(0.f,0.f));
     drawables["mostrarInstrucciones"] = &mostrarInstrucciones;
 
     if(!mostrarMenu.loadFromFile("fonts/fast99.ttf")){
@@ -24,6 +23,79 @@ Instructions::Instructions(Window& window): window_(window)
     window_.display();
 }
 
+void Instructions::load()
+{
+     for(int i=0;i<7;i++)
+    {
+        string n= to_string(i+1);
+        string load="img/instrucciones/"+n+".png";
+        imgLoad.push_back(new sf::Texture);
+        gifLoad.push_back(new sf::Sprite);
+        if(!(imgLoad[i])->loadFromFile(load)){
+                };
+        (gifLoad[i])->setTexture(*(imgLoad[i]));
+    }
+
+        sf::Clock clock;
+        sf::Time elapsed1 = clock.getElapsedTime();
+
+        while(elapsed1.asSeconds()<3.5)
+        {
+            elapsed1 = clock.getElapsedTime();
+             if(elapsed1.asMilliseconds()<500)
+            {
+                (loads["win"])=(gifLoad[0]);
+                window_.draw(drawables);
+                window_.draw(loads);
+                window_.draw(texttered);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1000)
+            {
+                (loads["win"])=(gifLoad[1]);
+                window_.draw(drawables);
+                window_.draw(loads);
+                window_.draw(texttered);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<1500)
+            {
+                (loads["win"])=(gifLoad[2]);
+                window_.draw(drawables);
+                window_.draw(loads);
+                window_.draw(texttered);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<2000)
+            {
+                (loads["win"])=(gifLoad[3]);
+                window_.draw(drawables);
+                window_.draw(loads);
+                window_.draw(texttered);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<2500)
+            {
+                (loads["win"])=(gifLoad[4]);
+                window_.draw(drawables);
+                window_.draw(loads);
+                window_.draw(texttered);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<3000)
+            {
+                (loads["win"])=(gifLoad[5]);
+                window_.draw(drawables);
+                window_.draw(loads);
+                window_.draw(texttered);
+                window_.display();
+            }else if(elapsed1.asMilliseconds()<3500)
+            {
+                (loads["win"])=(gifLoad[6]);
+                window_.draw(drawables);
+                window_.draw(loads);
+                window_.draw(texttered);
+                window_.display();
+            }
+        }
+}
+
+
 void Instructions::events()
 {
 
@@ -37,6 +109,7 @@ void Instructions::events()
 
 void Instructions::loop()
 {
+    load();
     while(isPlay)
     {
         events();

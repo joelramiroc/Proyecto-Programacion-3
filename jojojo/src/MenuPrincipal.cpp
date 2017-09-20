@@ -6,7 +6,7 @@ MenuPrincipal::MenuPrincipal(Window& window) : window_(window)
     musica.openFromFile("audio/menuMusica.ogg");
    	musica.setLoop(true);
    	musica.setVolume(10);
-    if (!sonidoClick.loadFromFile("audio/giro.ogg"))
+    if (!sonidoClick.loadFromFile("audio/click.ogg"))
 		return;
 	reproducirClick.setVolume(30);
 	reproducirClick.setBuffer(sonidoClick);
