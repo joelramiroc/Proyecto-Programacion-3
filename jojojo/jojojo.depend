@@ -405,7 +405,7 @@
 	<memory>
 	<iostream>
 
-1505916439 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
+1505933420 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\game.cpp
 	"Game.h"
 	<iostream>
 
@@ -430,7 +430,7 @@
 	<map>
 	<iostream>
 
-1505930375 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
+1505933349 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\herenciapadre.cpp
 	"HerenciaPadre.h"
 
 1505930288 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\herenciapadre.h
@@ -444,7 +444,7 @@
 	"InfoPlayer.h"
 	<SFML/Audio.hpp>
 
-1505922848 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
+1505930997 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withtime.cpp
 	"WithTime.h"
 
 1505886393 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtime.h
@@ -470,7 +470,7 @@
 1504496702 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withtimenormal.h
 	"WithTime.h"
 
-1505928581 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmoviments.cpp
+1505930609 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\withmoviments.cpp
 	"WithMoviments.h"
 
 1505886251 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\withmoviments.h
@@ -507,7 +507,7 @@
 	"HerenciaPadre.h"
 	"Cube.h"
 
-1505886496 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
+1505931047 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\libre.cpp
 	"Libre.h"
 
 1505886398 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\libre.h
@@ -584,14 +584,15 @@
 1504928264 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\infoplayer.cpp
 	"InfoPlayer.h"
 
-1505924616 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\menuprincipal.cpp
+1505932739 source:c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\src\menuprincipal.cpp
 	"MenuPrincipal.h"
 
-1505916331 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\menuprincipal.h
+1505932424 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\menuprincipal.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"../Game.h"
 	"Instructions.h"
+	<SFML/Audio.hpp>
 
 1505879863 c:\users\dell 5040 i7\desktop\proyecto-programacion-3\jojojo\include\instructions.h
 	<SFML/Graphics.hpp>

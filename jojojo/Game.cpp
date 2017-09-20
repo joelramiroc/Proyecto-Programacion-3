@@ -8,16 +8,6 @@ Game::Game(Window& window,string tipo) : window_(window)
 }
 int Game::inicializar()
 {
-    if(!letra.loadFromFile("fonts/Monster AG.ttf")){
-    return 1;
-    }
-    miTexto.setFont(letra);
-    miTexto.setCharacterSize(70);
-    miTexto.setString("Rubik Cube");
-    miTexto.setColor(sf::Color::Blue);
-    miTexto.setPosition(sf::Vector2f(100.f,70.f));
-
-
     if(!f1_p1_textC.loadFromFile("img/blanco/BLANCO1C.png")){
         return 1;
     };

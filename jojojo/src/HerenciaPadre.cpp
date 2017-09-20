@@ -9,6 +9,7 @@ HerenciaPadre::HerenciaPadre()
 
     if (!sonidoMovimiento.loadFromFile("audio/giro.ogg"))
 		return;
+		reproducirMovv.setVolume(30);
 	reproducirMovv.setBuffer(sonidoMovimiento);
 
 	if (!sonidoFin.loadFromFile("audio/fin.ogg"))
@@ -22,7 +23,8 @@ HerenciaPadre::HerenciaPadre()
 	if (!sonidoLost.loadFromFile("audio/lost.ogg"))
 		return;
 	reproducirLost.setBuffer(sonidoLost);
-    musica.openFromFile("audio/prueba.ogg");
+    musica.openFromFile("audio/musicaFondo.ogg");
+    musica.setVolume(20);
    	musica.setLoop(true);
 	musica.play();
 

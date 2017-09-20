@@ -84,7 +84,8 @@ void WithTime::win()
         guardar(nombreJugador,1,0);
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
-
+        musica.stop();
+        reproducirWin.play();
         while(elapsed1.asSeconds()<2)
         {
             elapsed1 = clock.getElapsedTime();
@@ -156,7 +157,8 @@ void WithTime::lost()
         guardar(nombreJugador,0,1);
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
-        reproducirFin.play();
+        musica.stop();
+        reproducirLost.play();
         while(elapsed1.asSeconds()<3)
         {
             elapsed1 = clock.getElapsedTime();
@@ -204,6 +206,7 @@ void WithTime::lost()
 
 void WithTime::playAgain()
 {
+    musica.play();
     timeP.restart();
     endGame=false;
     (*temp).erase("win");

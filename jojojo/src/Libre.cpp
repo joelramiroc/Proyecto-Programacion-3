@@ -74,7 +74,8 @@ void Libre::win()
         guardar(nombreJugador,1,0);
         sf::Clock clock;
         sf::Time elapsed1 = clock.getElapsedTime();
-
+        musica.stop();
+        reproducirWin.play();
         while(elapsed1.asSeconds()<2)
         {
             elapsed1 = clock.getElapsedTime();
@@ -136,6 +137,7 @@ void Libre::win()
 
 void Libre::playAgain()
 {
+    musica.play();
     endGame=false;
     Dispon=0;
     contara=0;
