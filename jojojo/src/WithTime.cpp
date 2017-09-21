@@ -16,8 +16,6 @@ WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& win
     }
     totalDisp=Dispon;
 
-
-
     this->nombreJugador=nombrePlayer;
     this->cube=cube;
     this->temp=&drawables;
