@@ -9,7 +9,7 @@ WithTime::WithTime(map<string,sf::Drawable*>& drawables, Cube* &cube,Window& win
         this->Dispon=540;
     }else if(level=="Normal")
     {
-        this->Dispon=480;
+        this->Dispon=360;
     }else
     {
         this->Dispon=180;

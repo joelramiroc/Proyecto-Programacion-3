@@ -86,7 +86,7 @@ HerenciaPadre::HerenciaPadre()
                             return;
                     };
             (gifLost[i])->setTexture(*(imgLost[i]));
-            (gifLost[i])->setPosition(sf::Vector2f(475.f,120.f));
+            (gifLost[i])->setPosition(sf::Vector2f(360.f,180.f));
         }
     }
 
